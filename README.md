@@ -8,7 +8,8 @@ Instructions:
     This theme is compatible with the latest release of Firefox and works on windows and linux
     To enable adaptive colors, you need to install the Adaptive Tab Bar Color extension. If not, the tabs will appear transparent.
 
-    <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/254d8b31-c13b-49c8-b86e-588d97ffdbc6" />
+<img width="1920" height="1200" alt="Screenshot (1103)" src="https://github.com/user-attachments/assets/577860d5-5896-45ed-9a06-d53d6ad0839a" />
+
  
   Installation
 
