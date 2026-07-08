@@ -15,11 +15,11 @@ A highly refined, premium CSS theme that transforms Firefox into a browser inspi
 
 <tr>
 <td>
-<img src="screenshots/light-mode.png" width="600" alt="Light Mode">
+<img src="screenshots/light-mode.png" width="800" alt="Light Mode">
 </td>
 
 <td>
-<img src="screenshots/dark-mode.png" width="600" alt="Dark Mode">
+<img src="screenshots/dark-mode.png" width="800" alt="Dark Mode">
 </td>
 </tr>
 </table>
