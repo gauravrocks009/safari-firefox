@@ -40,7 +40,7 @@ Built on top of the excellent **WhiteSur** theme, Safari Firefox fixes countless
 ---
 
 # 🚀 Headline Feature — Ultra-Compact One-Line UI
-<img src="screenshots/one-liner.png" width="500">
+<img src="screenshots/one-liner.png" width="1000">
 
 Unlike stock Firefox, Safari Firefox merges the **Tab Bar** and **Navigation Bar** into one beautiful continuous row.
 
