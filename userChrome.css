@@ -341,36 +341,36 @@ split-view-footer {
 }
 }
 
-#PersonalToolbar:not([customizing]) {
-  position: relative;
-  width: 100%;
-  height: 48px;
-  margin: 0 0 -44px 0 !important;
-  box-shadow: none !important;
-  outline: none !important;
-  background-color: var(--bg4) !important;
-  backdrop-filter: blur(15px) !important;
-  transform: rotateX(90deg);
-  transform-origin: top;
-  transition: transform 105ms linear 500ms !important;
-  z-index: 11;
-@media -moz-pref("sidebar.verticalTabs") {
-  margin: 0 0 -44px 256px !important;
-  width: calc(100% - 256px);
-}
-}
-
-#navigator-toolbox:hover:not(:has(.toolbarbutton-1:hover, #urlbar:hover, .tabbrowser-tab:hover, .tab-group-label:hover)) > #PersonalToolbar {
-  transition-delay: 100ms;
-  transform: rotateX(0deg);
-}
-
-:has(#PersonalToolbar .bookmark-item[open]) {
-#PersonalToolbar {
-  transition-delay: 100ms;
-  transform: rotateX(0deg);
-}
-}
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
 
 toolbarbutton.bookmark-item:not(.subviewbutton) {
   margin: 8px 0 !important;
@@ -3866,10 +3866,10 @@ tab-group > .tabbrowser-tab,
 }
 }
 
-#PersonalToolbar:not([customizing]) {
-  margin: 0 0 -44px 0 !important;
-  width: 100%;
-}
+/* removed */
+/* removed */
+/* removed */
+/* removed */
 
 .tab-group-label {
   font-size: 0 !important;
@@ -3985,27 +3985,27 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 }
 
-:has(#PersonalToolbar:not([collapsed])) {
-#navigator-toolbox:not(:hover) {
-  top: -95px;
-}
-
-#nav-bar {
-  padding-bottom: 42px !important;
-&::before {
-  top: 94px;
-}
-}
-
-#PersonalToolbar {
-  margin: -42px 0 0 0 !important;
-  transform: none;
-  transition: none !important;
-  background-color: transparent !important;
-  backdrop-filter: none !important;
-  border: none !important;
-}
-}
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
 
 #tabbrowser-tabs {
 tab-group > .tabbrowser-tab,
@@ -4380,17 +4380,17 @@ tab-split-view-wrapper {
 
 
 
-/* === PERMANENTLY SHOW BOOKMARKS TOOLBAR === */
-/* Force the bookmarks toolbar to always remain visible instead of hiding on hover */
-#PersonalToolbar {
-  transform: none !important;
-  margin: 0 !important;
-  transition: none !important;
-  height: 32px !important;
-  min-height: 32px !important;
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
-}
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
+/* removed */
 
 
 
@@ -4431,4 +4431,9 @@ tab-split-view-wrapper {
 #TabsToolbar .toolbarbutton-1[class*='workspace'] > .toolbarbutton-icon,
 #TabsToolbar .toolbarbutton-1[id*='workspace'] > .toolbarbutton-icon {
   margin: 0 auto !important;
+}
+
+/* === ACTIVE TAB ACCENT LINE === */
+.tabbrowser-tab[selected="true"] .tab-background {
+  box-shadow: inset 0 -2px 0 0 var(--color-accent-primary, AccentColor) !important;
 }
