@@ -1,15 +1,28 @@
 # Safari Firefox
 
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/b712f4b4-79c7-492e-ab21-54467816a51c" />
-
-
-<img width="1920" height="1200" alt="Screenshot (1176)" src="https://github.com/user-attachments/assets/3295fb45-1fb5-4f65-868c-20351961dbb6" />
-<img width="1920" height="1200" alt="Screenshot (1175)" src="https://github.com/user-attachments/assets/985159d5-19f8-466c-a927-5e2ab774a0d3" />
+<img src="screenshots/main.png" width="1000">
 
 <p align="center">
 A highly refined, premium CSS theme that transforms Firefox into a browser inspired by modern macOS Safari while preserving everything that makes Firefox powerful.
 </p>
+## 🌞 Light Mode & 🌙 Dark Mode
 
+<table>
+<tr>
+<td align="center"><b>🌞 Light Mode</b></td>
+<td align="center"><b>🌙 Dark Mode</b></td>
+</tr>
+
+<tr>
+<td>
+<img src="screenshots/light-mode.png" width="500" alt="Light Mode">
+</td>
+
+<td>
+<img src="screenshots/dark-mode.png" width="500" alt="Dark Mode">
+</td>
+</tr>
+</table>
 ---
 
 # ✨ Why Safari Firefox?
@@ -27,6 +40,7 @@ Built on top of the excellent **WhiteSur** theme, Safari Firefox fixes countless
 ---
 
 # 🚀 Headline Feature — Ultra-Compact One-Line UI
+<img src="screenshots/one-liner.png" width="500">
 
 Unlike stock Firefox, Safari Firefox merges the **Tab Bar** and **Navigation Bar** into one beautiful continuous row.
 
@@ -35,7 +49,7 @@ Unlike stock Firefox, Safari Firefox merges the **Tab Bar** and **Navigation Bar
 - 📏 Saves valuable vertical screen space.
 - 🌐 Gives more room to webpages.
 - 🎯 Cleaner, modern appearance.
-- ⚡ Less clutter.<img width="1920" height="1200" alt="Screenshot (1180)" src="https://github.com/user-attachments/assets/8c8055ed-8ad8-4c83-af9c-a46ef6f4e5e4" />
+- ⚡ Less clutter.
 
 - 💻 Automatically adapts to different window sizes.
 - ✅ Works out of the box on a fresh Firefox installation.
@@ -68,15 +82,11 @@ This includes:
 - Toolbar menus
 
 The screenshots below showcase this effect.
-
-<img width="1920" height="1200" alt="Screenshot (1180)" src="https://github.com/user-attachments/assets/3703addb-5899-4cff-9693-17682f327dad" />
-<img width="1920" height="1200" alt="Screenshot (1179)" src="https://github.com/user-attachments/assets/cb5b87c3-372e-41d0-9a4b-144612534cab" />
-
+<img src="screenshots/context_menu_1.png" width="400">
+<img src="screenshots/context_menu_2.png" width="400">
 
 # 📑 Beautiful Vertical Tabs
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/30908378-2c3f-4e38-93a8-523fa4e0531f" />
-
-
+<img src="screenshots/vertical_tabs_menu.png.png" width="400">
 Safari Firefox fully supports Firefox's Vertical Tabs.
 
 The sidebar has been redesigned to look lightweight, elegant and unobtrusive.
