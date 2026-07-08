@@ -8,13 +8,13 @@ A highly refined, premium CSS theme that transforms Firefox into a browser inspi
 ## 🌞 Light Mode
 
 <p align="center">
-  <img src="screenshots/light-mode.png" width="700">
+  <img src="screenshots/light-mode.png" width="800">
 </p>
 
 ## 🌙 Dark Mode
 
 <p align="center">
-  <img src="screenshots/dark-mode.png" width="700">
+  <img src="screenshots/dark-mode.png" width="800">
 </p>
 
 # ✨ Why Safari Firefox?
@@ -74,11 +74,11 @@ This includes:
 - Toolbar menus
 
 The screenshots below showcase this effect.
-<img src="screenshots/context_menu_1.png" width="400">
-<img src="screenshots/context_menu_2.png" width="400">
+<img src="screenshots/context_menu_1.png" width="800">
+<img src="screenshots/context_menu_2.png" width="800">
 
 # 📑 Beautiful Vertical Tabs
-<img src="screenshots/vertical_tabs_menu.png.png" width="400">
+<img src="screenshots/vertical_tabs_menu.png" width="1000">
 Safari Firefox fully supports Firefox's Vertical Tabs.
 
 The sidebar has been redesigned to look lightweight, elegant and unobtrusive.
