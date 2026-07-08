@@ -8,13 +8,13 @@ A highly refined, premium CSS theme that transforms Firefox into a browser inspi
 ## 🌞 Light Mode
 
 <p align="center">
-  <img src="screenshots/light-mode.png" width="1000">
+  <img src="screenshots/light-mode.png" width="800">
 </p>
 
 ## 🌙 Dark Mode
 
 <p align="center">
-  <img src="screenshots/dark-mode.png" width="1000">
+  <img src="screenshots/dark-mode.png" width="800">
 </p>
 
 # ✨ Why Safari Firefox?
