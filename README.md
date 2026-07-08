@@ -5,25 +5,17 @@
 <p align="center">
 A highly refined, premium CSS theme that transforms Firefox into a browser inspired by modern macOS Safari while preserving everything that makes Firefox powerful.
 </p>
-## 🌞 Light Mode & 🌙 Dark Mode
+## 🌞 Light Mode
 
-<table>
-<tr>
-<td align="center"><b>🌞 Light Mode</b></td>
-<td align="center"><b>🌙 Dark Mode</b></td>
-</tr>
+<p align="center">
+  <img src="screenshots/light-mode.png" width="1000">
+</p>
 
-<tr>
-<td>
-<img src="screenshots/light-mode.png" width="1000"  alt="Light Mode">
-</td>
+## 🌙 Dark Mode
 
-<td>
-<img src="screenshots/dark-mode.png" width="1000" height="500" alt="Dark Mode">
-</td>
-</tr>
-</table>
----
+<p align="center">
+  <img src="screenshots/dark-mode.png" width="1000">
+</p>
 
 # ✨ Why Safari Firefox?
 
