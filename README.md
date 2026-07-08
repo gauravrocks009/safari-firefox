@@ -10,47 +10,99 @@ Instructions:
 
 <img width="1920" height="1200" alt="Screenshot (1103)" src="https://github.com/user-attachments/assets/577860d5-5896-45ed-9a06-d53d6ad0839a" />
 
- 
-# How to Install the Safari Firefox Theme
+# 🚀 Installation
+
+Follow these steps to install the Safari Firefox theme.
+
+## 1. Open your Firefox profile
 
 1. Open **Firefox**.
+2. Type **`about:profiles`** in the address bar and press **Enter**.
+3. Under the profile marked **Default**, click **Open Folder**.
 
-2. In the address bar, type **`about:profiles`** and press **Enter**.
+![Open Firefox Profile](images/about-profiles.png)
 
-3. Under the profile marked as **Default**, click **Open Folder**.
+---
 
-4. Download the latest CSS files from my GitHub repository:
+## 2. Download the theme
 
-   * Go to: **https://github.com/gauravrocks009/safari-firefox**
-   * Open the **Releases** page.
-   * Download the latest versions of:
+Go to the GitHub repository:
 
-     * `userChrome.css`
-     * `userContent.css`
+**https://github.com/gauravrocks009/safari-firefox**
 
-5. In the Firefox profile folder that you opened earlier, create a new folder named:
+1. Open the **Releases** page.
+2. Download the latest release.
+3. Extract the archive if needed.
+4. You'll find two files:
 
-   ```text
-   chrome
-   ```
+* `userChrome.css`
+* `userContent.css`
 
-   > Make sure the folder name is all lowercase.
+![Download Release](images/releases.png)
 
-6. Copy both `userChrome.css` and `userContent.css` into the `chrome` folder.
+---
 
-7. Open a new Firefox tab and go to:
+## 3. Create the `chrome` folder
 
-   ```text
-   about:config
-   ```
+Inside your Firefox profile folder:
 
-8. Enable the required preference shown in the screenshot:
+1. Create a new folder named:
 
-   * Search for `toolkit.legacyUserProfileCustomizations.stylesheets`
-   * Set it to **true**.
+```text
+chrome
+```
 
-9. Go back to the **`about:profiles`** page.
+> **Important:** The folder name **must** be lowercase.
 
-10. Click **Restart Normally**.
+2. Copy both files into the `chrome` folder.
 
-That's it! The theme should now be applied.
+```
+Profile Folder
+│
+└── chrome
+    ├── userChrome.css
+    └── userContent.css
+```
+
+---
+
+## 4. Enable custom stylesheets
+
+Open a new tab and go to:
+
+```text
+about:config
+```
+
+Accept the warning if prompted.
+
+Search for each of the following preferences and set them to **`true`**:
+
+| Preference                                            | Value    |
+| ----------------------------------------------------- | -------- |
+| `toolkit.legacyUserProfileCustomizations.stylesheets` | ✅ `true` |
+| `svg.context-properties.content.enabled`              | ✅ `true` |
+| `widget.non-native-theme.use-theme-accent`            | ✅ `true` |
+
+![about Preferences](images/about-config.png)
+
+---
+
+## 5. Restart Firefox
+
+Go back to **`about:profiles`** and click **Restart Normally**.
+
+![Restart Firefox](images/restart-profile.png)
+
+---
+
+# ✅ Done!
+
+Your browser should now be using the Safari Firefox theme.
+
+If the theme doesn't apply:
+
+* Make sure the folder is named **`chrome`** (all lowercase).
+* Verify both CSS files are inside the `chrome` folder.
+* Confirm all three `about:config` preferences are set to **`true`**.
+* Restart Firefox again after making any changes.
