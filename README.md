@@ -18,7 +18,7 @@ Follow these steps to install the Safari Firefox theme.
 
 1. Open **Firefox**.
 2. Type **`about:profiles`** in the address bar and press **Enter**.
-3. Under the profile marked **Default**, click **Open Folder**.
+3. Under the profile marked **Default**, click on the Root Directory  **Open Folder**.
 
 ![Open Firefox Profile](images/about-profiles.png)
 
