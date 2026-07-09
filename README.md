@@ -5,19 +5,19 @@
 <p align="center">
 A highly refined, premium CSS theme that transforms Firefox into a browser inspired by modern macOS Safari while preserving everything that makes Firefox powerful.
 </p>
-## 🌞 Light Mode
+## Light Mode
 
 <p align="center">
   <img src="screenshots/light-mode.png" width="800">
 </p>
 
-## 🌙 Dark Mode
+## Dark Mode
 
 <p align="center">
   <img src="screenshots/dark-mode.png" width="800">
 </p>
 
-# ✨ Why Safari Firefox?
+# Why Safari Firefox?
 
 Let's be honest.
 
@@ -31,26 +31,26 @@ Built on top of the excellent **WhiteSur** theme, Safari Firefox fixes countless
 
 ---
 
-# 🚀 Headline Feature — Ultra-Compact One-Line UI
+# Headline Feature — Ultra-Compact One-Line UI
 <img src="screenshots/one-liner.png" width="1000">
 
 Unlike stock Firefox, Safari Firefox merges the **Tab Bar** and **Navigation Bar** into one beautiful continuous row.
 
 ## Why it matters
 
-- 📏 Saves valuable vertical screen space.
-- 🌐 Gives more room to webpages.
-- 🎯 Cleaner, modern appearance.
-- ⚡ Less clutter.
+- Saves valuable vertical screen space.
+- Gives more room to webpages.
+- Cleaner, modern appearance.
+- Less clutter.
 
-- 💻 Automatically adapts to different window sizes.
-- ✅ Works out of the box on a fresh Firefox installation.
+- Automatically adapts to different window sizes.
+- Works out of the box on a fresh Firefox installation.
 
 Instead of wasting an entire toolbar for tabs, everything fits elegantly into a single row—just like Safari.
 
 ---
 
-# 🌫️ Premium Liquid Glass UI
+# Premium Liquid Glass UI
 
 Every popup and menu throughout Firefox has been redesigned with a premium translucent "Liquid Glass" appearance inspired by Apple's latest interface.
 
@@ -77,7 +77,7 @@ The screenshots below showcase this effect.
 <img src="screenshots/context_menu_1.png" width="800">
 <img src="screenshots/context_menu_2.png" width="800">
 
-# 📑 Beautiful Vertical Tabs
+# Beautiful Vertical Tabs
 <img src="screenshots/vertical_tabs_menu.png" width="1000">
 Safari Firefox fully supports Firefox's Vertical Tabs.
 
@@ -101,13 +101,13 @@ The address bar intelligently expands whenever you hover over it, giving you mor
 
 ---
 
-# 🎨 Accent-Colored Active Tab
+# Accent-Colored Active Tab
 
 The active tab is highlighted with a clean underline that automatically follows your system accent colour, making it immediately obvious which tab is active while maintaining a native look.
 
 ---
 
-# ⚙️ Highly Customizable
+# Highly Customizable
 
 Almost every toolbar button can be customized.
 
@@ -125,15 +125,15 @@ Everything else is yours to customize.
 
 ---
 
-# 🖥️ Compatibility
+# Compatibility
 
-- ✅ Latest Firefox Release
-- ✅ Windows
-- ✅ Linux
+- Latest Firefox Release
+- Windows
+- Linux
 
 ---
 
-# 🚀 Installation
+# Installation
 
 ## 1. Open your Firefox profile
 
@@ -186,7 +186,7 @@ Enable these preferences:
 
 Restart Firefox.
 
-# 🎨 Customize Your Toolbar
+# Customize Your Toolbar
 
 After installation:
 
@@ -197,7 +197,7 @@ Arrange the interface however you like.
 
 ---
 
-# ⭐ Optional — Adaptive Tab Bar
+# Optional — Adaptive Tab Bar
 
 For an even more immersive experience, install the **Adaptive Tab Bar Colour** extension.
 
@@ -207,7 +207,7 @@ The result is a much more immersive experience where the browser almost disappea
 heres the direct link for the extension-https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/
 ---
 
-# ⭐ Optional — Enable Vertical Tabs
+# Optional — Enable Vertical Tabs
 
 1. Right-click the top toolbar.
 2. Enable **Vertical Tabs**.
@@ -218,7 +218,7 @@ heres the direct link for the extension-https://addons.mozilla.org/en-US/firefox
 ---
 
 
-# 🤝 Suggestions & Issues
+# Suggestions & Issues
 
 Found a bug?
 
@@ -232,7 +232,7 @@ Every suggestion helps improve Safari Firefox.
 
 ---
 
-# ⭐ Support
+# Support
 
 If you enjoy Safari Firefox, please leave the repository a ⭐.
 
