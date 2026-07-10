@@ -95,7 +95,7 @@ Benefits include:
 
 ---
 
-# 🔍 Smart Expanding Search Bar
+#  Smart Expanding Search Bar
 
 The address bar intelligently expands whenever you hover over it, giving you more room for long URLs while keeping the toolbar compact when not in use.
 
