@@ -27,7 +27,7 @@ So why shouldn't it look beautiful?
 
 **Safari Firefox** was created with one goal: make Firefox feel as polished, elegant, and premium as Safari without sacrificing Firefox's customization, extensions, privacy, and performance.
 
-Built on top of the excellent **WhiteSur** theme, Safari Firefox fixes countless visual inconsistencies, refines nearly every UI element, improves stability, and recreates Safari's signature compact browsing experience.
+Built on top of the excellent GWfox-T theme, Safari Firefox fixes countless visual inconsistencies, refines nearly every UI element, improves stability, and recreates Safari's signature compact browsing experience.
 
 ---
 
