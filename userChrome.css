@@ -222,7 +222,7 @@ split-view-footer {
 }
 }
 
-@media not -moz-pref("sidebar.verticalTabs") {
+@media all {
 .titlebar-buttonbox-container {
   position: absolute !important;
   left: 7px;
@@ -398,7 +398,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 
 
-@media not -moz-pref("sidebar.verticalTabs") {
+/* Removed non-standard media query that broke one-line UI on fresh Firefox */
 #trust-label, #identity-icon-label, .titlebar-spacer, #nav-bar:not([customizing]) toolbarspring {
   display: none !important;
 }
@@ -454,7 +454,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   top: 4.5px;
 }
 }
-}
+/* Removed closing brace for media query */
 
 
 /* button */
@@ -533,7 +533,7 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
   padding: 0 !important;
   width: 36px !important;
   height: 36px !important;
-@media not -moz-pref("sidebar.verticalTabs") {
+@media all {
   width: 32px !important;
   height: 32px !important;
   margin: 0 5px !important;
@@ -605,7 +605,7 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 }
 }
 
-@media  (not -moz-pref("sidebar.verticalTabs")) {
+@media all {
 &:not([customizing]) {
 #back-button[disabled], #forward-button[disabled] {
   display: none;
@@ -641,7 +641,7 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 }
 }
 
-@media not -moz-pref("sidebar.verticalTabs") {
+@media all {
 #nav-bar #alltabs-button,
 #TabsToolbar #alltabs-button {
   width: 36px !important;
@@ -749,7 +749,7 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 }
 }
 
-@media  (not -moz-pref("sidebar.verticalTabs")) {
+@media all {
 #TabsToolbar {
   transition: .25s !important;
   padding-inline-end: 54px !important;
@@ -860,7 +860,7 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 }
 }
 
-@media not -moz-pref("sidebar.verticalTabs") {
+@media all {
 .urlbar-input-container .urlbar-input {
   mask-image: linear-gradient(to left, transparent, #fff 15ch) !important;
 }
@@ -906,7 +906,7 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
   opacity: 1 !important;
 }
 }
-@media  (not -moz-pref("sidebar.verticalTabs")) {
+@media all {
 &[breakout][breakout-extend] .urlbarView {
   margin-inline-start: -25% !important;
   min-width: 150% !important;
@@ -1739,7 +1739,7 @@ tab-group & {
 @media -moz-pref("sidebar.verticalTabs") or true {
 .tab-content {
   pointer-events: none;
-@media not -moz-pref("sidebar.verticalTabs") {
+@media all {
   margin-inline-start: 2px;
 }
 }
@@ -1772,7 +1772,7 @@ tab-group & {
 }
 }
 
-@media not -moz-pref("sidebar.verticalTabs") {
+@media all {
 
 
 .tab-group-label {
@@ -2110,7 +2110,7 @@ tree {
 }
 
 @media (min-width: 610px) and (max-width: 866px) {
-@media not -moz-pref("sidebar.verticalTabs") {
+@media all {
 #urlbar-container {
   margin-left: 60px !important;
 }
@@ -2723,7 +2723,7 @@ sidebar-tab-row {
 
 #PanelUI-menu-button {
   list-style-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m 5,5 h 14 c 1.33,0 1.29,1.96 -0.04,1.96 H 5 C 3.67,6.96 3.67,5 5,5 m 14,6 H 5 c -1.33,0 -1.33,2 0,2 h 14 c 1.33,0 1.33,-2 0,-2 m 0,8 H 5 C 3.67,19 3.67,17 5,17 H 19 C 20.33,17 20.33,19 19,19'/%3E%3C/svg%3E") !important;
-@media  (not -moz-pref("sidebar.verticalTabs")) {
+@media all {
   list-style-image: url("chrome://global/skin/icons/more.svg") !important;
 }
 }
@@ -4145,7 +4145,7 @@ tab-split-view-wrapper {
 
 /* === ACTIVE TAB ACCENT LINE === */
 .tabbrowser-tab[selected="true"] .tab-background {
-  box-shadow: inset 0 -3px 0 0 var(--color-accent-primary, AccentColor) !important;
+  box-shadow: inset 0 -1px 0 0 var(--color-accent-primary, AccentColor) !important;
 }
 
 
@@ -4380,3 +4380,4 @@ menupopup,
   margin-top: 29px !important; 
   transition: margin-top 0.2s ease !important;
 }
+
