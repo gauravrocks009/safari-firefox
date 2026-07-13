@@ -134,6 +134,15 @@ Everything else is yours to customize.
 ---
 
 # Installation
+There are 2 methods to install this theme.
+1.Installer
+2.Manual
+
+# 1. Installer
+Download the installer from the Releases section and run it. The installer will automatically install the theme. Once the installation is complete, right-click the toolbar and arrange the icons however you like.
+<img src="screenshots/installer.png" width="500">
+
+# 2.Manual
 
 ## 1. Open your Firefox profile
 
