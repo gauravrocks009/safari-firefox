@@ -52,10 +52,15 @@ Instead of wasting an entire toolbar for tabs, everything fits elegantly into a 
 ---
 # Alternate Tab Styles Available
 Compact Tabs Bar
+
 <img src="screenshots/compact_tabs_bar.png" width="800">
+
 Separate Tabs Bar
+
 <img src="screenshots/seperate_tabs_bar.png" width="800">
+
 Virtical Tabs Bar
+
 <img src="screenshots/virtical_tabs_bar.png" width="800">
 
 # Premium Liquid Glass UI
