@@ -36,6 +36,11 @@ Built on top of the excellent GWfox-T theme, Safari Firefox fixes countless visu
 
 Unlike stock Firefox, Safari Firefox merges the **Tab Bar** and **Navigation Bar** into one beautiful continuous row.
 
+# Alternate Tab Styles Available
+<img src="screenshots/compact_tabs_bar.png" width="500">
+<img src="screenshots/seperate_tabs_bar.png" width="500">
+<img src="screenshots/virtical_tabs_bar.png" width="500">
+
 ## Why it matters
 
 - Saves valuable vertical screen space.
@@ -193,6 +198,7 @@ Enable these preferences:
 | toolkit.legacyUserProfileCustomizations.stylesheets | true |
 | svg.context-properties.content.enabled | true |
 | widget.non-native-theme.use-theme-accent | true |
+|safari_firefox_old(for seperate tabs bar) | true|
 
 Restart Firefox.
 
