@@ -5,6 +5,7 @@
 <p align="center">
 A highly refined, premium CSS theme that transforms Firefox into a browser inspired by modern macOS Safari while preserving everything that makes Firefox powerful.
 </p>
+
 ## Light Mode
 
 <p align="center">
