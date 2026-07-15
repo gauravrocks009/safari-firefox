@@ -36,11 +36,6 @@ Built on top of the excellent GWfox-T theme, Safari Firefox fixes countless visu
 
 Unlike stock Firefox, Safari Firefox merges the **Tab Bar** and **Navigation Bar** into one beautiful continuous row.
 
-# Alternate Tab Styles Available
-<img src="screenshots/compact_tabs_bar.png" width="500">
-<img src="screenshots/seperate_tabs_bar.png" width="500">
-<img src="screenshots/virtical_tabs_bar.png" width="500">
-
 ## Why it matters
 
 - Saves valuable vertical screen space.
@@ -54,7 +49,10 @@ Unlike stock Firefox, Safari Firefox merges the **Tab Bar** and **Navigation Bar
 Instead of wasting an entire toolbar for tabs, everything fits elegantly into a single row—just like Safari.
 
 ---
-
+# Alternate Tab Styles Available
+<img src="screenshots/compact_tabs_bar.png" width="800">
+<img src="screenshots/seperate_tabs_bar.png" width="800">
+<img src="screenshots/virtical_tabs_bar.png" width="800">
 # Premium Liquid Glass UI
 
 Every popup and menu throughout Firefox has been redesigned with a premium translucent "Liquid Glass" appearance inspired by Apple's latest interface.
