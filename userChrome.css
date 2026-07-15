@@ -8,7 +8,7 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 :root {
   --bg0: #8867fc;
-  --br0: 12px;
+  --br0: 11px;
   --bg1: color-mix(in srgb, -moz-menuhover 80%, transparent);
   --bg2: light-dark(#fff, #454545);
   --bg3: light-dark(rgba(50, 50, 50, .1), rgba(225, 225, 225, .1));
@@ -16,11 +16,11 @@
   --bg5: light-dark(rgba(255, 255, 255, .5), rgba(255, 255, 255, .04));
   --bg6: light-dark(color-mix(in srgb, AccentColor 20%, #fff), color-mix(in srgb, AccentColor 40%, #fff));
   --bg7: color-mix(in srgb, var(--bg0), transparent 75%);
-  --bs1: 0 5px 15px rgba(0, 0, 0, .2), inset 0 0 0 .5px rgba(0, 0, 0, .34), 0 0 0 .5px rgba(0, 0, 0, .12);
-  --bs2: 0 5px 15px rgba(0, 0, 0, .25), inset 0 0 0 .5px rgba(0, 0, 0, .78), 0 0 0 .5px rgba(0, 0, 0, .2);
-  --bs3: 0 4px 20px rgba(75, 75, 75, .1), inset 1px 1.5px 1px -1px rgba(255, 255, 255, .18), inset -.5px -.5px 1px 0 rgba(255, 255, 255, .2);
-  --bs4: 0 0 20px rgba(75, 75, 75, .1), inset 0 0 1px 0 rgba(255, 255, 255, .2);
-  --bs5: 0 0 2px rgba(15, 15, 15, .1), inset 1px 1.5px 1px -1px rgba(255, 255, 255, .18), inset -.5px -.5px 1px 0 rgba(255, 255, 255, .2);
+  --bs1: 0 4px 14px rgba(0, 0, 0, .2), inset 0 0 0 .4px rgba(0, 0, 0, .34), 0 0 0 .4px rgba(0, 0, 0, .12);
+  --bs2: 0 4px 14px rgba(0, 0, 0, .25), inset 0 0 0 .4px rgba(0, 0, 0, .78), 0 0 0 .4px rgba(0, 0, 0, .2);
+  --bs3: 0 4px 18px rgba(75, 75, 75, .1), inset 1px 1.5px 1px -1px rgba(255, 255, 255, .18), inset -.4px -.4px 1px 0 rgba(255, 255, 255, .2);
+  --bs4: 0 0 18px rgba(75, 75, 75, .1), inset 0 0 1px 0 rgba(255, 255, 255, .2);
+  --bs5: 0 0 2px rgba(15, 15, 15, .1), inset 1px 1.5px 1px -1px rgba(255, 255, 255, .18), inset -.4px -.4px 1px 0 rgba(255, 255, 255, .2);
   --focus-outline-color: light-dark(color-mix(in srgb, AccentColor 55%, transparent), color-mix(in srgb, AccentColor 45%, #555)) !important;
   --button-bgcolor: light-dark(rgba(70, 70, 70, .12), rgba(170, 170, 170, .15)) !important;
   --button-hover-bgcolor: light-dark(rgba(70, 70, 70, .1), rgba(170, 170, 170, .2)) !important;
@@ -48,7 +48,7 @@
   --urlbarView-result-button-hover-background-color: rgba(195, 195, 195, .2) !important;
   --toolbarbutton-icon-fill-attention: AccentColor !important;
   --arrowpanel-background: light-dark(#fff, #383838) !important;
-  --arrowpanel-border-radius: 12px !important;
+  --arrowpanel-border-radius: 11px !important;
   --in-content-box-background: light-dark(rgba(155, 155, 155, .2), rgba(195, 195, 195, .2)) !important;
   --background-color-box: light-dark(rgba(155, 155, 155, .2), rgba(195, 195, 195, .2)) !important;
   --in-content-box-border-color: transparent !important;
@@ -72,10 +72,10 @@
   --toolbarbutton-disabled-opacity: .4;
   --toolbar-bgcolor: var(--toolbox-bgcolor) !important;
   --toolbar-background-color: var(--toolbox-background-color) !important;
-  --arrowpanel-menuitem-border-radius: 12px !important;
-  --border-radius-xsmall: 12px !important;
-  --border-radius-small: 12px !important;
-  --button-border-radius: 50px !important;
+  --arrowpanel-menuitem-border-radius: 11px !important;
+  --border-radius-xsmall: 11px !important;
+  --border-radius-small: 11px !important;
+  --button-border-radius: 45px !important;
   --in-content-background-color: light-dark(#fff, #202121) !important;
 @media -moz-pref("gwt.ac") {
   --bg1: color-mix(in srgb, var(--bg0) 80%, transparent) !important;
@@ -95,9 +95,9 @@
   --toolbox-background-color: light-dark(#fff, #202121) !important;
 }
 @media (prefers-color-scheme: dark) {
-  --bs3: 0 4px 20px rgba(20, 21, 21, .1), inset 1px 1.5px 1px -1px rgba(255, 255, 255, .18), inset -.5px -.5px 1px 0 rgba(255, 255, 255, .2);
-  --bs4: 0 0 20px rgba(20, 21, 21, .1), inset 0 0 1px 0 rgba(255, 255, 255, .2);
-  --bs5: 0 0 2px rgba(20, 21, 21, .1), inset 1px 1.5px 1px -1px rgba(255, 255, 255, .18), inset -.5px -.5px 1px 0 rgba(255, 255, 255, .2);
+  --bs3: 0 4px 18px rgba(20, 21, 21, .1), inset 1px 1.5px 1px -1px rgba(255, 255, 255, .18), inset -.4px -.4px 1px 0 rgba(255, 255, 255, .2);
+  --bs4: 0 0 18px rgba(20, 21, 21, .1), inset 0 0 1px 0 rgba(255, 255, 255, .2);
+  --bs5: 0 0 2px rgba(20, 21, 21, .1), inset 1px 1.5px 1px -1px rgba(255, 255, 255, .18), inset -.4px -.4px 1px 0 rgba(255, 255, 255, .2);
 }
 &:-moz-window-inactive {
 @media not -moz-pref("gwt.atbc") {
@@ -126,7 +126,7 @@
 @media -moz-pref("sidebar.verticalTabs") {
 :has(#tabbrowser-tabs[expanded]) {
 #nav-bar {
-  padding-left: 76px !important;
+  padding-left: 68px !important;
 }
 }
 }
@@ -144,12 +144,12 @@
   background: none !important;
 &[splitview] {
 .browserContainer {
-  border-radius: 12px !important;
+  border-radius: 11px !important;
 }
 .split-view-panel {
-  margin: 2px 8px 8px 8px !important;
+  margin: 2px 7px 7px 7px !important;
   box-shadow: var(--bs3) !important;
-  border-radius: 12px !important;
+  border-radius: 11px !important;
   outline: 1px solid rgba(45, 45, 45, .05) !important;
 @media (prefers-color-scheme: dark) {
   outline: 1px solid rgba(245, 245, 245, .05) !important;
@@ -163,22 +163,22 @@
 .split-view-splitter {
   border: none !important;
   background: none !important;
-  margin-inline-start: -8.5px !important;
-  margin-inline-end: -8.5px !important;
+  margin-inline-start: -8px !important;
+  margin-inline-end: -8px !important;
   z-index: 9;
 }
 split-view-footer {
-  border-block-start: .5px solid rgba(105, 105, 105, .1) !important;
-  border-inline-start: .5px solid rgba(105, 105, 105, .1) !important;
+  border-block-start: .4px solid rgba(105, 105, 105, .1) !important;
+  border-inline-start: .4px solid rgba(105, 105, 105, .1) !important;
   background-color: light-dark(rgba(238, 238, 238, .75), rgba(52, 52, 54, .75)) !important;
-  backdrop-filter: blur(5px) !important;
+  backdrop-filter: blur(4px) !important;
 }
 }
 }
 
 [data-l10n-id="urlbar-split-view-button"] {
   appearance: none !important;
-  border-radius: 50px;
+  border-radius: 45px;
 &:hover {
   background-color: var(--button-hover-bgcolor);
 }
@@ -225,8 +225,8 @@ split-view-footer {
 @media all {
 .titlebar-buttonbox-container {
   position: absolute !important;
-  left: 7px;
-  top: 19px;
+  left: 6px;
+  top: 17px;
   z-index: 99999 !important;
   pointer-events: auto !important;
 }
@@ -236,8 +236,8 @@ split-view-footer {
 :has([sidebar-shown]) {
 .titlebar-buttonbox-container {
   position: absolute !important;
-  left: 7px;
-  top: 19px;
+  left: 6px;
+  top: 17px;
   z-index: 99999 !important;
   pointer-events: auto !important;
 }
@@ -259,17 +259,17 @@ split-view-footer {
 .titlebar-buttonbox {
   display: flex !important;
   align-items: center !important;
-  gap: 8px !important;
+  gap: 7px !important;
 }
 
 .titlebar-button {
   appearance: none !important;
   -moz-appearance: none !important;
   border: none !important;
-  width: 12px !important;
-  height: 12px !important;
-  min-width: 12px !important;
-  min-height: 12px !important;
+  width: 11px !important;
+  height: 11px !important;
+  min-width: 11px !important;
+  min-height: 11px !important;
   border-radius: 50% !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -291,7 +291,7 @@ split-view-footer {
   content: "" !important;
   position: absolute !important;
   inset: 0 !important;
-  background-size: 8px !important;
+  background-size: 7px !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   opacity: 0 !important;
@@ -308,15 +308,15 @@ split-view-footer {
 
 #nav-bar {
   background: transparent !important;
-  margin-left: 10px !important;
-  padding-left: 76px !important;
+  margin-left: 9px !important;
+  padding-left: 68px !important;
   transition: margin-left .35s !important;
   z-index: 9 !important;
 @media -moz-pref("sidebar.visibility", "hide-sidebar") {
 :root[customizing]:not([inFullscreen]):has(#tabbrowser-tabs:not([expanded])) & {
   padding-left: 4px !important;
 :has([sidebar-shown]) & {
-  padding-left: 76px !important;
+  padding-left: 68px !important;
 }
 }
 }
@@ -324,8 +324,8 @@ split-view-footer {
 
 #PanelUI-menu-button {
   position: fixed;
-  inset-inline-end: 10px;
-  margin-block: 8px !important;
+  inset-inline-end: 9px;
+  margin-block: 7px !important;
 }
 
 #nav-bar-overflow-button {}
@@ -364,15 +364,15 @@ split-view-footer {
 /* removed */
 
 toolbarbutton.bookmark-item:not(.subviewbutton) {
-  margin: 8px 0 !important;
+  margin: 7px 0 !important;
 }
 
 #personal-toolbar-empty-description,
 toolbarbutton.bookmark-item:not(.subviewbutton) {
-  padding: 2px 5px !important; font-size: 13px !important;
+  padding: 2px 4px !important; font-size: 12px !important;
 }
 
-@media (min-width: 610px) and (max-width: 866px) {
+@media (min-width: 549px) and (max-width: 779px) {
 #nav-bar .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #PanelUI-menu-button, #nav-bar-overflow-button, #alltabs-button, #sidebar-button),
 #TabsToolbar .toolbarbutton-1:not(#back-button, #forward-button, #stop-button, #reload-button, #PanelUI-menu-button, #nav-bar-overflow-button, #alltabs-button, #sidebar-button) {
   visibility: collapse;
@@ -389,10 +389,10 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 @media -moz-pref("sidebar.verticalTabs") {
 #nav-bar {
-  padding-inline-end: 126px !important;
+  padding-inline-end: 113px !important;
 
 :has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & {
-  padding-inline-end: 162px !important;
+  padding-inline-end: 146px !important;
 }
 }
 }
@@ -414,28 +414,28 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   grid-area: 2 / 1 / auto / auto;
   z-index: 9 !important;
 :root[customizing]:not([inFullscreen]):has(#tabbrowser-tabs:not([expanded])) & {
-  padding-left: 76px !important;
+  padding-left: 68px !important;
 }
 }
 
 #urlbar-container {
   transition: max-width .25s !important;
-  max-width: 219px !important;
+  max-width: 197px !important;
 &:has(#urlbar:is(:hover, [focused], [open]), .urlbar-page-action[open], .identity-box-button[open], #notification-popup-box[open], #trust-icon-container[open]) {
-  max-width: 315px !important;
+  max-width: 284px !important;
 }
 }
 
 #TabsToolbar {
   grid-area: 2 / 2 / auto / auto;
-  padding-inline-end: 177px !important;
+  padding-inline-end: 159px !important;
   z-index: 9 !important;
 &:-moz-window-inactive {
   opacity: 1 !important;
 }
 
 :has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & {
-  padding-inline-end: 213px !important;
+  padding-inline-end: 192px !important;
 }
 }
 
@@ -445,16 +445,25 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #alltabs-button { display: none !important;
   position: fixed;
-  inset-inline-end: 46px;
+  inset-inline-end: 41px;
   
 :has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & {
-  inset-inline-end: 82px;
+  inset-inline-end: 74px;
 }
-@media (min-width: 610px) and (max-width: 866px) {
-  top: 4.5px;
+@media (min-width: 549px) and (max-width: 779px) {
+  top: 4px;
 }
 }
 /* Removed closing brace for media query */
+
+/* GLOBAL: Push + and Download buttons to the RIGHT side of TabsToolbar */
+#TabsToolbar-customization-target > #new-tab-button {
+  order: 1000 !important;
+  margin-inline-start: auto !important;
+}
+#TabsToolbar-customization-target > #downloads-button {
+  order: 1001 !important;
+}
 
 
 /* button */
@@ -476,8 +485,8 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 
 #scrollbutton-up ~ spacer {
 &[part^="overflow"] {
-  width: 5px !important;
-  margin-block: 3.5px;
+  width: 4px !important;
+  margin-block: 3px;
   margin-inline: -4px !important;
 }
 
@@ -503,24 +512,24 @@ toolbar .toolbarbutton-1:not(#PlacesChevron) {
 }
 
 toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #new-tab-button, #tabs-newtab-button, #alltabs-button, #PlacesChevron) > .toolbarbutton-icon {
-  padding: 9px !important;
+  padding: 8px !important;
 }
 
 #nav-bar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button, #nav-bar-overflow-button, #new-tab-button, #tabs-newtab-button, #alltabs-button) {
   background: var(--bg5) !important;
   box-shadow: var(--bs3) !important;
   border-radius: 50% !important;
-  margin: 8px !important;
+  margin: 7px !important;
   padding: 0 !important;
-  width: 36px !important;
-  height: 36px !important;
+  width: 32px !important;
+  height: 32px !important;
 > .toolbarbutton-icon,
 > .toolbarbutton-badge-stack {
-  width: 36px !important;
-  height: 36px !important;
-  padding: 10px !important;
-@media -moz-pref("sidebar.verticalTabs") {
+  width: 32px !important;
+  height: 32px !important;
   padding: 9px !important;
+@media -moz-pref("sidebar.verticalTabs") {
+  padding: 8px !important;
 }
 }
 }
@@ -529,37 +538,37 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
   background: var(--bg5) !important;
   box-shadow: var(--bs3) !important;
   border-radius: 50% !important;
-  margin: 8px !important;
+  margin: 7px !important;
   padding: 0 !important;
-  width: 36px !important;
-  height: 36px !important;
-@media all {
   width: 32px !important;
   height: 32px !important;
-  margin: 0 5px !important;
+@media all {
+  width: 29px !important;
+  height: 29px !important;
+  margin: 0 4px !important;
   background: none !important;
   box-shadow: none !important;
 > .toolbarbutton-icon,
 > .toolbarbutton-badge-stack {
-  width: 32px !important;
-  height: 32px !important;
-  padding: 8px !important;
+  width: 29px !important;
+  height: 29px !important;
+  padding: 7px !important;
 }
 }
 }
 
 #nav-bar .toolbarbutton-1:is(#ipprotection-button) > .toolbarbutton-icon,
 #TabsToolbar .toolbarbutton-1:is(#ipprotection-button) > .toolbarbutton-icon {
-  width: 50px !important;
+  width: 45px !important;
 }
 
 #nav-bar {
 #back-button, #forward-button {
-  margin: 8px !important;
+  margin: 7px !important;
 > .toolbarbutton-icon {
-  width: 29px !important;
-  height: 29px !important;
-  padding: 6px !important;
+  width: 26px !important;
+  height: 26px !important;
+  padding: 5px !important;
 }
 &:not(:-moz-window-inactive) {
   opacity: 1 !important;
@@ -584,24 +593,24 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 
 #back-button:has(+ #forward-button) {
   background: var(--bg5) !important;
-  max-width: 76px !important;
-  min-width: 76px !important;
-  height: 36px !important;
+  max-width: 68px !important;
+  min-width: 68px !important;
+  height: 32px !important;
   box-shadow: var(--bs3);
-  border-radius: 50px !important;
+  border-radius: 45px !important;
 > .toolbarbutton-icon {
-  margin-inline-start: -36px;
+  margin-inline-start: -32px;
 }
 }
 
 #back-button + #forward-button {
-  margin-inline-start: -44.5px !important;
-  margin-inline-end: 9.5px !important;
+  margin-inline-start: -40px !important;
+  margin-inline-end: 9px !important;
 }
 
 :is(#nav-bar-customization-target, #TabsToolbar-customization-target) > #back-button:first-child:has(+ #forward-button) {
 > .toolbarbutton-icon {
-  margin-inline-start: -42px;
+  margin-inline-start: -38px;
 }
 }
 
@@ -614,14 +623,14 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
   display: flex;
 }
 #back-button:has(+ #forward-button[disabled]) {
-  max-width: 36px !important;
-  min-width: 36px !important;
+  max-width: 32px !important;
+  min-width: 32px !important;
 > .toolbarbutton-icon {
   margin-inline-start: 0;
 }
 :is(#nav-bar-customization-target, #TabsToolbar-customization-target) > &:nth-child(1 of :not([hidden])) {
 > .toolbarbutton-icon {
-  margin-inline-start: -6px;
+  margin-inline-start: -5px;
 }
 }
 }
@@ -644,8 +653,8 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 @media all {
 #nav-bar #alltabs-button,
 #TabsToolbar #alltabs-button {
-  width: 36px !important;
-  height: 36px !important;
+  width: 32px !important;
+  height: 32px !important;
   background: var(--bg5) !important;
   margin-top: -2px !important;
 
@@ -653,9 +662,9 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 
 > .toolbarbutton-badge-stack {
   scale: 1.1;
-  width: 26px !important;
-  height: 26px !important;
-  padding: 5px 4px 4px 5px !important;
+  width: 23px !important;
+  height: 23px !important;
+  padding: 4px 4px 4px 4px !important;
 }
 }
 
@@ -663,16 +672,16 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
   background: var(--bg5) !important;
   box-shadow: var(--bs3) !important;
   border-radius: 50% !important;
-  margin-block: 8px !important;
-  width: 36px !important;
-  height: 36px !important;
+  margin-block: 7px !important;
+  width: 32px !important;
+  height: 32px !important;
   z-index: 9;
 
-  margin-inline: 8px !important;
+  margin-inline: 7px !important;
 
 
 > image {
-  padding: 10.5px !important;
+  padding: 9px !important;
 }
 }
 
@@ -682,20 +691,20 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 #nav-bar #alltabs-button {
   position: fixed;
   background: var(--bg5) !important;
-  margin: 8px 5px 2px 5px !important;
-  width: 36px !important;
-  height: 36px !important;
-  inset-inline-end: 41px;
+  margin: 7px 4px 2px 4px !important;
+  width: 32px !important;
+  height: 32px !important;
+  inset-inline-end: 37px;
   border-radius: 0 !important;
   box-shadow: none !important;
 > .toolbarbutton-badge-stack {
   scale: 1.1;
-  width: 26px !important;
-  height: 26px !important;
-  padding: 5px 4px 4px 5px !important;
+  width: 23px !important;
+  height: 23px !important;
+  padding: 4px 4px 4px 4px !important;
 }  
 :has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & {
-  inset-inline-end: 77px;
+  inset-inline-end: 69px;
 }
 }
 .webextension-browser-action .toolbarbutton-icon {
@@ -708,17 +717,17 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 
 #PanelUI-menu-button, #nav-bar-overflow-button {
   background: var(--bg5) !important;
-  margin: 8px 0 !important;
+  margin: 7px 0 !important;
   padding: 0 !important;
-  width: 36px !important;
-  height: 36px !important;
+  width: 32px !important;
+  height: 32px !important;
 }
 
 #nav-bar-overflow-button {
 > .toolbarbutton-icon {
-  width: 29px !important;
-  height: 29px !important;
-  padding: 6px !important;
+  width: 26px !important;
+  height: 26px !important;
+  padding: 5px !important;
 }
 }
 
@@ -726,24 +735,24 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
   border-radius: 0 50% 50% 0 !important;
 > .toolbarbutton-badge-stack {
   scale: 1.1;
-  padding: 5px !important;
+  padding: 4px !important;
 }
 &::before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  width: 108px;
-  height: 36px;
-  border-radius: 50px;
+  width: 97px;
+  height: 32px;
+  border-radius: 45px;
   pointer-events: none;
   box-shadow: var(--bs3);
 }
 :has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & {
 &::before {
-  width: 144px;
-@media (min-width: 610px) and (max-width: 866px) {
-  width: 108px;
+  width: 130px;
+@media (min-width: 549px) and (max-width: 779px) {
+  width: 97px;
 }
 }
 }
@@ -752,10 +761,10 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 @media all {
 #TabsToolbar {
   transition: .25s !important;
-  padding-inline-end: 54px !important;
+  padding-inline-end: 49px !important;
 
 :has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & {
-  padding-inline-end: 54px !important;
+  padding-inline-end: 49px !important;
 
 }
 }
@@ -763,32 +772,32 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
   border-radius: 50% !important;
 
 &::before {
-  width: 36px;
+  width: 32px;
 }
 :has(#PanelUI-menu-button:hover, #alltabs-button:hover, #nav-bar-overflow-button:hover, #PanelUI-menu-button[open], #alltabs-button[open], #nav-bar-overflow-button[open]) & {
 &::before {
-  width: 108px;
+  width: 97px;
 }
 :has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & {
 &::before {
-  width: 144px;
-@media (min-width: 610px) and (max-width: 866px) {
-  width: 108px;
+  width: 130px;
+@media (min-width: 549px) and (max-width: 779px) {
+  width: 97px;
 }
 }
 }
 }
 :has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & {
 &::before {
-  width: 36px;
-@media (min-width: 610px) and (max-width: 866px) {
-  width: 36px;
+  width: 32px;
+@media (min-width: 549px) and (max-width: 779px) {
+  width: 32px;
 }
 }
 }
 }
 
-@media (min-width: 610px) and (max-width: 866px) {
+@media (min-width: 549px) and (max-width: 779px) {
 #alltabs-button { display: none !important;
 :has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & {
   display: none !important;
@@ -804,24 +813,24 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 &[breakout][breakout-extend] {
   margin-left: unset !important;
   width: var(--urlbar-width) !important;
-  top: 8px !important;
+  top: 7px !important;
 .urlbarView {
   width: calc(var(--urlbar-width) + 2 * var(--urlbar-margin-inline)) !important;
   margin-inline: calc(-1 * var(--urlbar-margin-inline)) !important;
-  margin-top: 6px !important;
-  border-radius: 20px !important;
+  margin-top: 5px !important;
+  border-radius: 18px !important;
   background-color: var(--bg4) !important;
-  backdrop-filter: blur(5px) !important;
+  backdrop-filter: blur(4px) !important;
   box-shadow: var(--bs1) !important;
   animation-name: panel-in !important;
   animation-duration: 180ms !important;
-@media (min-width: 610px) and (max-width: 866px) {
+@media (min-width: 549px) and (max-width: 779px) {
   margin-inline-start: -50% !important;
   min-width: 50vh !important;
 }
 }
 .urlbarView-row {
-  border-radius: 50px !important;
+  border-radius: 45px !important;
 }
 .urlbarView-row-inner {
   flex-wrap: nowrap !important;
@@ -848,11 +857,11 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
   display: none !important;
 }
 .urlbar-input-container {
-  padding-inline-start: 11px !important;
+  padding-inline-start: 10px !important;
 &::before {
   content: url("chrome://global/skin/icons/search-glass.svg");
   margin-top: 2px;
-  margin-right: 6px;
+  margin-right: 5px;
   -moz-context-properties: fill, fill-opacity;
   fill: currentColor;
   fill-opacity: .48;
@@ -922,8 +931,8 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 &:not(:has(#identity-box[pageproxystate="valid"].extensionPage)) {
 &:not(:hover, [open], :has(*[open])) {
 .urlbar-input {
-  padding-inline-start: 10px !important;
-  padding-inline-end: 15px !important;
+  padding-inline-start: 9px !important;
+  padding-inline-end: 14px !important;
 }
 .urlbar-input-container[pageproxystate="invalid"] .urlbar-input {
   padding-inline-start: 0 !important;
@@ -941,13 +950,13 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 }
 }
 .urlbar-page-action {
-  margin-inline-end: calc(-16px - 2 * var(--urlbar-icon-padding));
+  margin-inline-end: calc(-14px - 2 * var(--urlbar-icon-padding));
 }
 #identity-box[pageproxystate="valid"].chromeUI,
 #identity-permission-box, 
 #notification-popup-box, 
 #trust-icon-container {
-  margin-inline-start: calc(-16px - 2 * var(--urlbar-icon-padding));
+  margin-inline-start: calc(-14px - 2 * var(--urlbar-icon-padding));
 }
 &:is(:hover, [open], :has(*[open])) {
 .urlbar-page-action,
@@ -966,7 +975,7 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 }
 }
 #identity-box {
-  min-height: 28px !important;
+  min-height: 25px !important;
 }
 &:-moz-window-inactive {
 *:not(.urlbar-background) { opacity: .78; }
@@ -974,35 +983,34 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 }
 
 .urlbar-background {
-  height: 36px !important;
+  height: 32px !important;
   border: none !important;
-  border-radius: 50px !important;
+  border-radius: 45px !important;
   background: var(--bg5) !important;
   box-shadow: var(--bs3) !important;
   outline-style: solid !important;
   outline-color: transparent !important;
-  outline-width: 18px !important;
+  outline-width: 16px !important;
 #urlbar[focused] & {
-  outline-color: var(--focus-outline-color) !important;
-  outline-width: 3.5px !important;
-  outline-offset: -1px !important;
-  box-shadow: none !important;
+  outline-color: transparent !important;
+  outline-width: 0 !important;
+  box-shadow: var(--bs3) !important;
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
 }
 
 .urlbar-input-container {
   padding: 0 !important;
-  height: 36px !important;
+  height: 32px !important;
   align-items: center !important;
-  border-radius: 50px !important;
-  padding-inline: 5px !important;
+  border-radius: 45px !important;
+  padding-inline: 4px !important;
 .urlbar-input {
 #urlbar:not([focused], [usertyping]) & {
   text-align: center !important;
 }
 &::placeholder {
-  font-size: 12.5px !important;
+  font-size: 11px !important;
 }
 }
 }
@@ -1018,7 +1026,7 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 }
 
 .urlbarView-body-outer {
-  padding: 0 8px !important;
+  padding: 0 7px !important;
 }
 
 #urlbar-zoom-button {
@@ -1030,7 +1038,7 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 }
 
 #urlbar-search-mode-indicator {
-  height: 22px !important;
+  height: 20px !important;
 }
 
 .urlbarView-url {
@@ -1087,8 +1095,8 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
 .urlbar-revert-button,
 .searchmode-switcher {
   scale: .85;
-  height: 28px !important;
-  width: 28px !important;
+  height: 25px !important;
+  width: 25px !important;
   border-radius: 50% !important;
   background-color: transparent !important;
   opacity: .75;
@@ -1120,25 +1128,25 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
   margin-inline-end: 2px !important;
 .urlbar:not(#searchbar-new)[searchmode] & {
   background-color: var(--button-hover-bgcolor) !important;
-  border-radius: 16px !important;
+  border-radius: 14px !important;
   width: unset !important;
-  margin-inline-start: -10px !important;
-  margin-inline-end: -5px !important;
+  margin-inline-start: -9px !important;
+  margin-inline-end: -4px !important;
   opacity: 1;
 }
 > .searchmode-switcher-content {
-  margin-inline-start: 55px;
+  margin-inline-start: 50px;
 &::before {
   content: url("chrome://global/skin/icons/search-glass.svg");
   -moz-context-properties: fill;
   fill: light-dark(#525252, #c9c9cb);
-  margin-inline-start: -45px;
+  margin-inline-start: -40px;
   margin-block-start: 2px;
 }
 .urlbar:not(#searchbar-new)[searchmode] & {
 &::before {
   content: "";
-  margin-inline-start: -54px;
+  margin-inline-start: -49px;
 }
 }
 }
@@ -1164,7 +1172,7 @@ toolbar .toolbarbutton-1:not(#back-button, #forward-button, #PanelUI-menu-button
   outline: none !important;
 @media -moz-pref("sidebar.verticalTabs") {
 #tabbrowser-tabs[expanded] & {
-  border-radius: 8px !important;
+  border-radius: 7px !important;
 }
 }
 #tabbrowser-tabs[movingtab-group] & {
@@ -1212,7 +1220,7 @@ tab:not([selected]):hover & {
 [orient="horizontal"] & {
 .tabbrowser-tab & {
 &[selected] {
-  backdrop-filter: blur(5px) !important;
+  backdrop-filter: blur(4px) !important;
 }
 }
 
@@ -1310,7 +1318,7 @@ tab-group[collapsed] > .tabbrowser-tab[visuallyselected] > .tab-stack > & {
 }
 
 .tab-label {
-  font-size: 13px !important;
+  font-size: 12px !important;
   margin-bottom: 1px !important;
 }
 
@@ -1319,7 +1327,7 @@ tab-group[collapsed] > .tabbrowser-tab[visuallyselected] > .tab-stack > & {
 }
 
 #tabbrowser-tabs[orient="horizontal"][overflow] #pinned-tabs-container {
-  padding-right: 10px;
+  padding-right: 9px;
 }
 
 #tabbrowser-tabs {
@@ -1330,11 +1338,8 @@ tab-group > .tabbrowser-tab {
   border-inline-start: none !important;
 .tabbrowser-tab {
 &[selected]:not([pinned], #tabbrowser-tabs[movingtab] &) {
-  position: sticky !important;
-  left: 0;
-  right: 0;
   z-index: 9;
-  min-width: 225px !important;
+  /* min-width: 202px !important; */
 tab-split-view-wrapper & {
   min-width: unset !important;
 }
@@ -1342,7 +1347,7 @@ tab-split-view-wrapper & {
 }
 
 
-  max-height: 44px !important;
+  max-height: 40px !important;
   margin-bottom: 4px !important;
 &[movingtab] {
   padding-bottom: 0 !important;
@@ -1355,7 +1360,7 @@ tab-split-view-wrapper & {
 }
 .tabbrowser-tab {
 tab-split-view-wrapper & {
-  min-height: 36px !important;
+  min-height: 32px !important;
 &:not([hasactivetab]) {
 &:last-child {
   border-inline-start: none !important;
@@ -1368,11 +1373,11 @@ tab-split-view-wrapper & {
 }
 &[tab-note] {
 .tab-content {
-  margin-inline: -3.5px;
+  margin-inline: -3px;
 }
 .tab-icon-stack {
-  margin-inline-start: 3.5px;
-  margin-bottom: -3.5px;
+  margin-inline-start: 3px;
+  margin-bottom: -3px;
 }
 }
 }
@@ -1392,13 +1397,13 @@ tab-split-view-wrapper & {
   content: none !important;
 }
 .tabbrowser-tab {
-  padding-block: 5px !important;
+  padding-block: 4px !important;
 &:not([pinned]) .tab-background {
   margin-block: 0 !important;
 }
 }
 tab-group > .tabbrowser-tab {
-  max-height: 42px;
+  max-height: 38px;
 [collapsed] & {
 &:not([selected], [busy]) {
   display: block !important;
@@ -1411,10 +1416,10 @@ tab-group > .tabbrowser-tab {
 }
 
 .tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
-  height: 5px !important;
-  width: 5px !important;
+  height: 4px !important;
+  width: 4px !important;
   margin: 0 !important;
-  border-radius: 5px !important;
+  border-radius: 4px !important;
 #tabbrowser-tabs[orient="vertical"] & {
   order: 1;
 }
@@ -1422,9 +1427,9 @@ tab-group > .tabbrowser-tab {
 
 .tabbrowser-tab:not([selected], [pinned]) {
 #tabbrowser-tabs[orient="horizontal"] &[fadein] {
-  min-width: 70px !important;
+  /* min-width: 63px !important; */
 
-  min-width: 130px !important;
+  /* min-width: 117px !important; */
 tab-split-view-wrapper & {
   min-width: unset !important;
 }
@@ -1460,7 +1465,7 @@ tab-group[collapsed] {
 
 .tabbrowser-tab:not([pinned]):hover .tab-close-button {
   display: flex !important;
-  visibility: visible;
+  visibility: visible !important;
 }
 
 .tabbrowser-tab .tab-close-button {
@@ -1468,8 +1473,8 @@ tab-group[collapsed] {
 }
 
 .tabbrowser-tab .close-icon {
-  height: 16.5px !important;
-  width: 16.5px !important;
+  height: 15px !important;
+  width: 15px !important;
   padding: 3px !important;
 }
 
@@ -1493,10 +1498,10 @@ tab-group > tab-split-view-wrapper & {
   &:hover { scale: .9; }
   &:is([soundplaying], [muted], [activemedia-blocked]) {
   background: light-dark(color-mix(in srgb, var(--button-bgcolor) 20%, #fff), color-mix(in srgb, var(--button-bgcolor) 80%, #555)) !important;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(4px);
   border: none !important;
   &:not([pinned]) {
-  background-size: 16px !important;
+  background-size: 14px !important;
 }
   &:hover {
   background: light-dark(color-mix(in srgb, var(--button-hover-bgcolor) 20%, #fff), color-mix(in srgb, var(--button-hover-bgcolor) 80%, #555)) !important;
@@ -1538,7 +1543,7 @@ tab-split-view-wrapper & {
   scale: .7;
   list-style-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='context-fill' fill-opacity='context-fill-opacity' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 3 5.083 C 3 3.933 3.933 3 5.083 3 L 10.917 3 C 12.067 3 13 3.933 13 5.083 L 13 8 L 10.083 8 C 8.933 8 8 8.933 8 10.083 L 8 13 L 5.083 13 C 3.933 13 3 12.067 3 10.917 L 3 5.083 Z M 8.833 12.882 C 9.125 12.78 9.393 12.613 9.616 12.39 L 12.39 9.616 C 12.613 9.393 12.78 9.125 12.882 8.833 L 10.083 8.833 C 9.393 8.833 8.833 9.393 8.833 10.083 L 8.833 12.882 Z'/%3E%3C/svg%3E") !important;
   background: light-dark(color-mix(in srgb, var(--button-bgcolor) 20%, #fff), color-mix(in srgb, var(--button-bgcolor) 80%, #555)) !important;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(4px);
   border: none !important;
 &:hover {
   background: light-dark(color-mix(in srgb, var(--button-hover-bgcolor) 20%, #fff), color-mix(in srgb, var(--button-hover-bgcolor) 80%, #555)) !important;
@@ -1575,19 +1580,19 @@ toolbarseparator:not(.tab-group-edit-mode-only) {
 }
 .tab-group-editor-name {
 > label {
-  margin-inline-start: 8px !important;
+  margin-inline-start: 7px !important;
 }
 > input {
   background-color: var(--button-bgcolor) !important;
-  border-radius: 50px !important;
+  border-radius: 45px !important;
 }
 }
 .tab-group-editor-swatch {
-  border-radius: 50px !important;
+  border-radius: 45px !important;
 input:checked + & {
   border-color: transparent !important;
   outline: 2px solid light-dark(#fff, #333) !important;
-  outline-offset: -8px !important;
+  outline-offset: -7px !important;
 }
 }
 }
@@ -1610,7 +1615,7 @@ input:checked + & {
 }
 
 #tabbrowser-tabs[orient="vertical"] & {
-  margin-block-start: 5px !important;
+  margin-block-start: 4px !important;
 
 tab-group:not([collapsed]) > &,
 tab-group[collapsed][hasactivetab] > & {
@@ -1670,8 +1675,8 @@ tab-group[previewpanelactive] & {
 }
 
 tab-split-view-wrapper {
-  margin-inline-start: 7.5px !important;
-  margin-inline-end: 8px !important;
+  margin-inline-start: 7px !important;
+  margin-inline-end: 7px !important;
   padding: 0 !important;
   background-color: transparent !important;
 :root[sidebar-expand-on-hover] #tabbrowser-tabs[orient="vertical"] & {
@@ -1680,12 +1685,12 @@ tab-split-view-wrapper {
 #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
   margin-inline-start: 0 !important;
 .tab-content {
-  margin-inline-start: 8px !important;
+  margin-inline-start: 7px !important;
   justify-content: unset !important;
   padding-inline: var(--space-medium) !important;
 }
 .tab-close-button {
-  inset-inline-start: -8px !important;
+  inset-inline-start: -7px !important;
 }
 }
 tab-group & {
@@ -1705,10 +1710,10 @@ tab-group & {
 .tabbrowser-tab {
   border: none !important;
 &:first-child {
-  margin-inline-end: .5px !important;
+  margin-inline-end: .4px !important;
 }
 &:last-child {
-  margin-inline-start: .5px !important;
+  margin-inline-start: .4px !important;
 }
 }
 }
@@ -1731,7 +1736,7 @@ tab-group & {
 }
 
 
-  min-width: 219px !important;
+  min-width: 197px !important;
 
 }
 }
@@ -1758,7 +1763,7 @@ tab-group & {
 
 .tab-close-button {
   pointer-events: auto;
-  margin-inline: 0 -16.5px !important;
+  margin-inline: 0 -15px !important;
 }
 
 #tabbrowser-tabs[movingtab] .tab-icon-image {
@@ -1767,7 +1772,7 @@ tab-group & {
 
 .tab-label-container {
 :is([soundplaying], [muted], [activemedia-blocked]) & {
-  margin-inline-start: 5.5px;
+  margin-inline-start: 5px;
 }
 }
 }
@@ -1779,11 +1784,11 @@ tab-group & {
   opacity: .9;
   margin: 0 !important;
   outline: none !important;
-  min-width: 28px !important;
-  max-width: 78px !important;
-  min-height: 28px !important;
-  max-height: 28px !important;
-  line-height: 28px !important;
+  min-width: 25px !important;
+  max-width: 70px !important;
+  min-height: 25px !important;
+  max-height: 25px !important;
+  line-height: 25px !important;
   font-weight: normal !important;
   color: light-dark(var(--tab-group-color), var(--tab-group-color-invert)) !important;
   background-color: color-mix(in srgb, light-dark(var(--tab-group-color), var(--tab-group-color-invert)) 30%, transparent) !important;
@@ -1812,13 +1817,13 @@ tab-group:not([collapsed]) > &::after {
 
 menupopup, panel[type="arrow"] {
   --panel-border-color: transparent !important;
-  --panel-border-radius: 16px !important;
+  --panel-border-radius: 14px !important;
   --panel-separator-color: transparent !important;
   --arrowpanel-background: var(--bg2) !important;
   --arrowpanel-border-color: transparent !important;
   --arrowpanel-color: light-dark(#000, #fff) !important;
-  --arrowpanel-menuitem-border-radius: 12px !important;
-  --panel-menuitem-border-radius: 12px !important;
+  --arrowpanel-menuitem-border-radius: 11px !important;
+  --panel-menuitem-border-radius: 11px !important;
   --panel-background: transparent !important;
   --panel-background-color: transparent !important;
   --panel-color: light-dark(#000, #fff) !important;
@@ -1840,7 +1845,7 @@ menupopup[needsgutter] {
 > menuitem,
 > menucaption {
 &::before {
-  padding-inline: 9.5px !important;
+  padding-inline: 9px !important;
 }
 }
 }
@@ -1864,7 +1869,7 @@ menupopup[needsgutter] {
 
 @keyframes panel-in {
 0% {
-  transform: translateY(-30px);
+  transform: translateY(-27px);
   opacity: 0;
 }
 100% {
@@ -1934,18 +1939,18 @@ menupopup,
 
 menuitem, menu {
   appearance: none !important;
-  border-radius: 7px !important;
-  height: 24px !important;
+  border-radius: 6px !important;
+  height: 22px !important;
 }
 
 menuitem[badge]::after {
-  border-radius: 12px !important;
+  border-radius: 11px !important;
   border: none !important;
   color: inherit !important;
   background-color: var(--button-bgcolor) !important;
   font-weight: 480 !important;
-  font-size: 11px !important;
-  padding: 1px 8px !important;
+  font-size: 10px !important;
+  padding: 1px 7px !important;
   scale: .9;
 }
 
@@ -2020,7 +2025,7 @@ toolbarbutton.subviewbutton:not(#appMenu-zoomEnlarge-button2, #appMenu-zoomReduc
 
 toolbarseparator::before {
   border-top: 1px solid var(--bg3) !important;
-  margin: 0 8px 0 !important;
+  margin: 0 7px 0 !important;
   content: "";
   display: block;
   flex: 1;
@@ -2028,7 +2033,7 @@ toolbarseparator::before {
 
 menuseparator::before {
   border-top: 1px solid var(--bg3) !important;
-  margin: 0 8px 0 !important;
+  margin: 0 7px 0 !important;
 }
 
 menupopup menuseparator {
@@ -2041,13 +2046,13 @@ toolbarseparator[orient="vertical"] {
 }
 
 .dialogBox {
-  backdrop-filter: blur(5px) !important;
+  backdrop-filter: blur(4px) !important;
   box-shadow: var(--bs1) !important;
   animation-name: panel-grow;
   animation-duration: 250ms;
-  border-radius: 20px !important;
+  border-radius: 18px !important;
 #window-modal-dialog > .dialogOverlay > &:not(.spotlightBox) {
-  margin-top: 80px !important;
+  margin-top: 72px !important;
 }
 }
 
@@ -2066,15 +2071,15 @@ window[role="dialog"] {
   background-color: var(--button-hover-bgcolor) !important;
   border: none !important;
   box-shadow: none !important;
-  padding: 0 12px !important;
-  height: 20px !important;
-  border-radius: 50px !important;
+  padding: 0 11px !important;
+  height: 18px !important;
+  border-radius: 45px !important;
   margin-top: 2px !important;
   margin-bottom: 2px !important;
 }
 
 #unified-extensions-view {
-  --uei-icon-size: 16px !important;
+  --uei-icon-size: 14px !important;
   width: 20em !important;
 .panel-header,
 .panel-header + toolbarseparator,
@@ -2083,7 +2088,7 @@ window[role="dialog"] {
   display: none !important;
 }
 &:first-child {
-  margin-top: 11px !important;
+  margin-top: 10px !important;
 }
 }
 
@@ -2101,18 +2106,18 @@ tree {
 
 #editBookmarkPanelContent > input,
 #editBookmarkPanelContent > hbox > input {
-  height: 35px !important;
-  border-radius: 50px !important;
+  height: 32px !important;
+  border-radius: 45px !important;
 }
 
 :root#main-window {
-  min-width: 750px !important;
+  min-width: 675px !important;
 }
 
-@media (min-width: 610px) and (max-width: 866px) {
+@media (min-width: 549px) and (max-width: 779px) {
 @media all {
 #urlbar-container {
-  margin-left: 60px !important;
+  margin-left: 54px !important;
 }
 }
 @media -moz-pref("sidebar.verticalTabs") {
@@ -2175,7 +2180,7 @@ input { --background-color-box: light-dark(rgba(155, 155, 155, .2), rgba(195, 19
 
 .search {
   margin-inline-start: 0 !important;
-  min-height: 32px !important;
+  min-height: 29px !important;
 }
 
 input[type="radio"] {
@@ -2192,7 +2197,7 @@ input[type="checkbox"] {
   &:checked {
   background-color: AccentColor !important;
   background-image: url("chrome://devtools/skin/images/check.svg") !important;
-  background-size: 14px;
+  background-size: 13px;
   background-repeat: no-repeat;
   background-position: center;
   -moz-context-properties: fill, stroke;
@@ -2217,7 +2222,7 @@ input[type="checkbox"] {
   &[checked] {
   background-color: AccentColor !important;
   background-image: url("chrome://devtools/skin/images/check.svg") !important;
-  background-size: 14px;
+  background-size: 13px;
   background-repeat: no-repeat;
   background-position: center;
   -moz-context-properties: fill, stroke;
@@ -2235,10 +2240,10 @@ input[type="checkbox"] {
 }
 
 input {
-  padding-inline-end: 10px !important;
+  padding-inline-end: 9px !important;
 &::-moz-search-clear-button {
   padding: 2px !important;
-  border-radius: 50px !important;
+  border-radius: 45px !important;
 }
 }
 }
@@ -2252,8 +2257,8 @@ input {
 
 treechildren::-moz-tree-row {
   outline: none !important;
-  border-radius: 7px !important;
-  margin-inline: 5px !important;
+  border-radius: 6px !important;
+  margin-inline: 4px !important;
 }
 
 treechildren::-moz-tree-row(selected) {
@@ -2299,7 +2304,7 @@ richlistbox {
 #customization-panelWrapper > .panel-arrowcontent {
   background-color: var(--button-bgcolor) !important;
   box-shadow: none !important;
-  border-radius: 12px !important;
+  border-radius: 11px !important;
 }
 
 #customization-panelWrapper > .panel-arrowbox > .panel-arrow[side="top"] {
@@ -2313,22 +2318,22 @@ panel#feature-callout,
 
 #tab-notification-deck {
   position: fixed;
-  top: 49px;
-  right: 6px;
+  top: 44px;
+  right: 5px;
   z-index: 9;
 }
 
 #statuspanel-label {
-  border: .5px solid rgba(105, 105, 105, .1) !important;
-  border-radius: 5px !important;
-  margin: 5px !important;
+  border: .4px solid rgba(105, 105, 105, .1) !important;
+  border-radius: 4px !important;
+  margin: 4px !important;
   background-color: light-dark(rgba(238, 238, 238, .75), rgba(52, 52, 54, .75)) !important;
-  backdrop-filter: blur(5px) !important;
+  backdrop-filter: blur(4px) !important;
 }
 
 .findbar-container {
   background-color: var(--bg4) !important;
-  backdrop-filter: blur(5px) !important;
+  backdrop-filter: blur(4px) !important;
   box-shadow: var(--bs1) !important;
 }
 
@@ -2376,37 +2381,37 @@ panel#feature-callout,
 }
 
 .ctrlTab-preview-inner {
-  border-radius: 16px !important;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, .35) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 14px 22px rgba(0, 0, 0, .35) !important;
   background-color: rgba(0, 0, 0, .85) !important;
 }
 
 #ctrlTab-showAll {
-  border-radius: 16px !important;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, .35) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, .35) !important;
   background-color: rgba(0, 0, 0, .85) !important;
-  margin-top: 28px !important;
+  margin-top: 25px !important;
 }
 
 .ctrlTab-canvas {
-  border-radius: 16px !important;
+  border-radius: 14px !important;
   box-shadow: none !important;
-  margin-top: -8px !important;
-  margin-left: -8px !important;
-  margin-right: -8px !important;
+  margin-top: -7px !important;
+  margin-left: -7px !important;
+  margin-right: -7px !important;
 > img,
 > canvas {
-  border-top-left-radius: 14px !important;
-  border-top-right-radius: 14px !important;
+  border-top-left-radius: 13px !important;
+  border-top-right-radius: 13px !important;
 }
 }
 
 .browserContainer > findbar {
   position: absolute !important;
   top: 4px;
-  right: -16px;
+  right: -14px;
   width: 100% !important;
-  height: 96px !important;
+  height: 86px !important;
   border: none !important;
   background: none !important;
   flex-direction: row-reverse;
@@ -2423,8 +2428,8 @@ panel#feature-callout,
   flex-grow: 100;
 }
 checkbox {
-  height: 24px;
-  width: 24px;
+  height: 22px;
+  width: 22px;
 .checkbox-icon {
   display: block !important;
   -moz-context-properties: fill, fill-opacity;
@@ -2454,7 +2459,7 @@ checkbox {
 .findbar-find-status {
   display: none;
 }
-@media (min-width: 610px) and (max-width: 796px) {
+@media (min-width: 549px) and (max-width: 716px) {
 .found-matches {
   display: none;
 }
@@ -2462,60 +2467,60 @@ checkbox {
 .findbar-highlight, .findbar-case-sensitive,
 .findbar-entire-word, .findbar-match-diacritics {
   position: absolute;
-  right: 78px;
+  right: 70px;
 &:not([hidden]) {
   display: flex !important;
 }
 }
 .findbar-case-sensitive {
-  right: 95px;
+  right: 86px;
 }
 .findbar-entire-word {
-  right: 113px;
+  right: 102px;
 }
 .findbar-match-diacritics {
-  right: 131px;
+  right: 118px;
 }
 .findbar-closebutton {
   position: absolute;
-  top: 19px;
-  right: 41px;
+  top: 17px;
+  right: 37px;
   margin: 0 !important;
   background: none !important;
   pointer-events: auto;
   z-index: 1;
 & > image {
-  padding: 5px;
-  max-height: 24px !important;
-  max-width: 24px !important;
+  padding: 4px;
+  max-height: 22px !important;
+  max-width: 22px !important;
 .findbar-closebutton:hover & {
   background: var(--button-hover-bgcolor);
-  border-radius: 50px;
+  border-radius: 45px;
 }
 .findbar-closebutton:active & {
   background: var(--button-active-bgcolor);
-  border-radius: 50px;
+  border-radius: 45px;
 }
 }
 }
 .findbar-container {
-  height: 42px !important;
-  padding-inline-start: 10px;
-  margin-top: 6px;
-  margin-right: 32px;
+  height: 38px !important;
+  padding-inline-start: 9px;
+  margin-top: 5px;
+  margin-right: 29px;
   pointer-events: auto;
   overflow-inline: visible !important;
   flex-direction: row-reverse;
-  border-radius: 50px !important;
+  border-radius: 45px !important;
 & > hbox {
-  width: 260px !important;
-  margin-right: 30px;
-  padding-right: 5px;
+  width: 234px !important;
+  margin-right: 27px;
+  padding-right: 4px;
 toolbarbutton {
   margin: 0 !important;
-  border-radius: 50px !important;
-  height: 24px !important;
-  width: 24px !important;
+  border-radius: 45px !important;
+  height: 22px !important;
+  width: 22px !important;
   outline: none !important;
 &:hover {
   background: var(--button-hover-bgcolor) !important;
@@ -2531,18 +2536,18 @@ toolbarbutton {
 }
 .findbar-textbox {
   width: 100% !important;
-  min-height: 24px;
-  margin-inline-end: 5px !important;
+  min-height: 22px;
+  margin-inline-end: 4px !important;
   background: rgba(165, 165, 165, .1) !important;
   outline-style: solid !important;
   outline-color: transparent !important;
-  outline-width: 18px !important;
-  padding-inline-start: 22px !important;
-  padding-inline-end: 75px !important;
+  outline-width: 16px !important;
+  padding-inline-start: 20px !important;
+  padding-inline-end: 68px !important;
   background-image: url(chrome://global/skin/icons/search-glass.svg) !important;
   background-repeat: no-repeat !important;
-  background-size: 12px !important;
-  background-position: left 5px bottom 5px !important;
+  background-size: 11px !important;
+  background-position: left 4px bottom 4px !important;
   -moz-context-properties: fill, fill-opacity;
   fill: currentColor;
   fill-opacity: .65;
@@ -2558,15 +2563,15 @@ toolbarbutton {
 xul|search-textbox {
   appearance: none !important;
   border-bottom: 1px solid rgba(185, 185, 185, .1) !important;
-  border-radius: 50px !important;
-  height: 28px !important;
-  max-height: 28px !important;
-  padding: 6px !important;
+  border-radius: 45px !important;
+  height: 25px !important;
+  max-height: 25px !important;
+  padding: 5px !important;
   background-color: light-dark(rgba(102, 105, 108, .1), rgba(165, 165, 165, .1)) !important;
 }
 
 xul|search-textbox[focused] {
-  outline: 3.5px solid var(--focus-outline-color) !important;
+  outline: 3px solid var(--focus-outline-color) !important;
   outline-offset: -1px;
   transition: outline 100ms ease-out;
 }
@@ -2574,9 +2579,9 @@ xul|search-textbox[focused] {
 input[type="search"] {
   border: none !important;
   border-bottom: 1px solid rgba(185, 185, 185, .1) !important;
-  border-radius: 50px !important;
-  height: 28px !important;
-  max-height: 28px !important;
+  border-radius: 45px !important;
+  height: 25px !important;
+  max-height: 25px !important;
   background-color: light-dark(rgba(102, 105, 108, .1), rgba(165, 165, 165, .1)) !important;
 }
 
@@ -2585,14 +2590,14 @@ input[type="search"],
 [type="text"] {
   outline-style: solid !important;
   outline-color: transparent !important;
-  outline-width: 18px !important;
+  outline-width: 16px !important;
 }
 
 xul|search-textbox[focused],
 input[type="search"]:focus-within,
 [type="text"]:focus-visible {
   outline-color: var(--focus-outline-color) !important;
-  outline-width: 3.5px !important;
+  outline-width: 3px !important;
   outline-offset: -1px !important;
   transition: all .3s cubic-bezier(.8, 0, 0, .8) !important;
 }
@@ -2600,7 +2605,7 @@ input[type="search"]:focus-within,
 @-moz-document url("chrome://browser/content/sidebar/sidebar-history.html"), url("chrome://browser/content/sidebar/sidebar-syncedtabs.html") {
 input {
   appearance: none !important;
-  min-height: 32px !important;
+  min-height: 29px !important;
 }
 }
 
@@ -2628,7 +2633,7 @@ input {
 body {
   background: light-dark(#fff, #202121);
   border: 1px solid var(--bg3);
-  border-radius: 12px;
+  border-radius: 11px;
 }
 }
 
@@ -2664,17 +2669,17 @@ sidebar-tab-row {
 }
 
 .sidebar-splitter {
-  height: 30px;
+  height: 27px;
   bottom: 4px;
   margin-block: auto !important;
-  border-radius: 10px;
+  border-radius: 9px;
   transition: .25s !important;
-  --splitter-width: 5px !important;
+  --splitter-width: 4px !important;
 #sidebar-box:hover + & {
   background-color: var(--panel-separator-color) !important;
 }
 &:hover {
-  height: calc(100% - 10px);
+  height: calc(100% - 9px);
   transition: .25s !important;
 }
 }
@@ -2732,8 +2737,8 @@ sidebar-tab-row {
   list-style-image: url("chrome://global/skin/icons/warning.svg") !important;
   -moz-context-properties: fill;
   fill: #f9c63b;
-  width: 48px !important;
-  height: 48px !important;
+  width: 43px !important;
+  height: 43px !important;
 }
 
 #tracking-protection-icon {
@@ -2759,8 +2764,8 @@ sidebar-tab-row {
 
 .textbox-search-sign {
   display: inherit !important;
-  width: 16px !important;
-  height: 16px !important;
+  width: 14px !important;
+  height: 14px !important;
   opacity: .8 !important;
   -moz-context-properties: fill;
   fill: currentColor;
@@ -2781,40 +2786,40 @@ sidebar-tab-row {
 :where(#appMenu-mainView) > .panel-subview-body > .subviewbutton > .toolbarbutton-icon {
   fill: currentColor;
   -moz-context-properties: fill;
-  margin-inline: 0 8px !important;
+  margin-inline: 0 7px !important;
   scale: .75;
 }
 
 #appMenu-zoom-controls {
   border-top: 1px solid var(--bg3) !important;
-  margin-inline: 16px !important;
+  margin-inline: 14px !important;
 &::before {
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
 }
 & > .toolbarbutton-text {
-  margin-inline-start: -8px !important;
+  margin-inline-start: -7px !important;
 }
 & > #appMenu-fullscreen-button2 {
-  margin-inline-end: -8px !important;
+  margin-inline-end: -7px !important;
 }
 }
 
 #appMenu-fxa-status2[fxastatus] > toolbarbutton::before {
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   background-image: var(--avatar-image-url);
 }
 
 #appMenu-fxa-status2:not([fxastatus="signedin"], [fxastatus="unverified"], [fxastatus="login-failed"])::before {
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   background-image: url("chrome://browser/skin/fxa/avatar-empty.svg");
   margin-inline-start: -2px;
-  margin-inline-end: 9px;
+  margin-inline-end: 8px;
   -moz-context-properties: fill;
   fill: currentColor;
   scale: .75;
@@ -2851,9 +2856,9 @@ sidebar-tab-row {
 :where(#toolbar-context-menu > menuitem:not(.menuitem-iconic))::before,
 :where(#contentAreaContextMenu > menu:not(.menu-iconic))::before,
 :where(#contentAreaContextMenu > menuitem:not(.menuitem-iconic))::before {
-  width: 16px;
-  height: 16px;
-  padding-inline-end: 8px;
+  width: 14px;
+  height: 14px;
+  padding-inline-end: 7px;
   content: "" !important;
   visibility: visible !important;
   -moz-context-properties: fill;
@@ -3329,7 +3334,7 @@ sidebar-tab-row {
 #sidebar {
   box-shadow: none !important;
   background-color: var(--button-bgcolor) !important;
-  border-radius: 12px !important;
+  border-radius: 11px !important;
 }
 
 #sidebar-main, #sidebar-container {
@@ -3346,8 +3351,8 @@ sidebar-tab-row {
 
 @media -moz-pref("sidebar.verticalTabs") {
 #sidebar-main, #sidebar-container {
-  max-width: 240px !important;
-  margin-top: -5px !important;
+  max-width: 216px !important;
+  margin-top: -4px !important;
 }
 
 #sidebar-box {
@@ -3358,7 +3363,7 @@ sidebar-tab-row {
   pointer-events: var(--dp);
   opacity: var(--op);
 &[orientation="horizontal"] {
-  padding-inline: 19px !important;
+  padding-inline: 17px !important;
 }
 }
 
@@ -3375,9 +3380,9 @@ sidebar-tab-row {
 
 #sidebar-tools-and-extensions-splitter {
   display: var(--dp) !important;
-  width: 10px !important;
+  width: 9px !important;
   margin-inline: auto !important;
-  margin-block-start: 15px !important;
+  margin-block-start: 14px !important;
   border-top: none !important;
   border-color: transparent !important;
   background-color: transparent !important;
@@ -3388,7 +3393,7 @@ sidebar-tab-row {
   -moz-window-dragging: no-drag;
 &:hover {
   background-color: var(--focus-outline-color) !important;
-  width: calc(100% - 25px) !important;
+  width: calc(100% - 22px) !important;
   opacity: 1;
   transition: .25s !important;
 }
@@ -3397,7 +3402,7 @@ sidebar-tab-row {
 
 #vertical-pinned-tabs-splitter {
   margin-block-start: 4px !important;
-  width: 10px !important;
+  width: 9px !important;
   margin-inline: auto !important;
   border-top-color: transparent !important;
 #vertical-tabs:hover & {
@@ -3407,7 +3412,7 @@ sidebar-tab-row {
   -moz-window-dragging: no-drag;
 &:hover {
   background-color: var(--focus-outline-color) !important;
-  width: calc(100% - 25px) !important;
+  width: calc(100% - 22px) !important;
   opacity: 1;
   transition: .25s !important;
 }
@@ -3418,7 +3423,7 @@ sidebar-tab-row {
   display: flex !important;
   align-items: center;
   font-weight: normal !important;
-  font-size: 13px !important;
+  font-size: 12px !important;
   color: light-dark(var(--tab-group-color), var(--tab-group-color-invert)) !important;
   opacity: .9;
   outline: none !important;
@@ -3426,28 +3431,28 @@ sidebar-tab-row {
   margin-block: 0 !important;
   padding-block: 0 !important;
   margin-left: 1px !important;
-  margin-right: 10px !important;
+  margin-right: 9px !important;
   margin-bottom: 1px !important;
-  padding-left: 33px !important;
-  border-radius: 50px !important;
+  padding-left: 30px !important;
+  border-radius: 45px !important;
   width: 100% !important;
   background-color: color-mix(in srgb, light-dark(var(--tab-group-color), var(--tab-group-color-invert)) 30%, transparent) !important;
   background-image: url("chrome://global/skin/icons/arrow-down-12.svg");
   background-repeat: no-repeat;
-  background-position: left 9px bottom 11px;
+  background-position: left 8px bottom 10px;
   -moz-context-properties: fill;
   fill: currentColor;
 #tabbrowser-tabs[expanded] & {
-  border-radius: 8px !important;
+  border-radius: 7px !important;
 }
 
 tab-group[collapsed] > .tab-group-label-container & {
   background-image: url("chrome://global/skin/icons/folder.svg");
-  background-position: left 9px bottom 7.5px;
+  background-position: left 8px bottom 7px;
 [hasactivetab] & {
   background-image: url("chrome://global/skin/icons/folder.svg"), url("chrome://global/skin/icons/more.svg");
-  background-size: auto, 10px 16px;
-  background-position: left 9px bottom 7.5px, left 12.5px bottom 7.5px;
+  background-size: auto, 9px 14px;
+  background-position: left 8px bottom 7px, left 11px bottom 7px;
 }
 }
 
@@ -3483,8 +3488,8 @@ tab-group > .tabbrowser-tab,
 
 #tabs-newtab-button,
 #vertical-tabs-newtab-button {
-  font-size: 13px !important;
-  border-radius: 8px !important;
+  font-size: 12px !important;
+  border-radius: 7px !important;
 > .toolbarbutton-text {
   display: none;
 }
@@ -3492,17 +3497,17 @@ tab-group > .tabbrowser-tab,
 
 :has(#tabbrowser-tabs[expanded]) {
 #sidebar-main, #sidebar-container {
-  min-width: 240px !important;
+  min-width: 216px !important;
 }
 
 :has([sidebar-shown]) {
 #nav-bar {
-  margin-left: 180px !important;
+  margin-left: 162px !important;
   transition: margin-left .35s !important;
-@media (min-width: 610px) and (max-width: 866px) {
-  margin-left: 67px !important;
+@media (min-width: 549px) and (max-width: 779px) {
+  margin-left: 60px !important;
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
-  margin-left: 170px !important;
+  margin-left: 153px !important;
 }
 }
 }
@@ -3511,8 +3516,8 @@ tab-group > .tabbrowser-tab,
   background: light-dark(rgba(205, 205, 198, .1), rgba(255, 255, 255, .04)) !important;
   border-radius: var(--br0) !important;
   box-shadow: var(--bs4) !important;
-  margin: -44px 8px 8px 8px !important;
-  padding-top: 39px !important;
+  margin: -40px 7px 7px 7px !important;
+  padding-top: 35px !important;
   z-index: 5;
 @media (not -moz-pref("gwt.atbc")) and (prefers-color-scheme: light) {
   outline: solid 1px #fff !important;
@@ -3521,19 +3526,19 @@ tab-group > .tabbrowser-tab,
 @media -moz-pref("gwt.atbc") {
   background: var(--bg5) !important;
 }
-@media (min-width: 610px) and (max-width: 866px) {
+@media (min-width: 549px) and (max-width: 779px) {
   visibility: collapse;
 }
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
   background: var(--bg5) !important;
-  backdrop-filter: blur(5px) !important;
+  backdrop-filter: blur(4px) !important;
 @media (prefers-color-scheme: dark) {
-  box-shadow: -10px 0 20px rgba(20, 21, 21, .1), inset 0 0 1px 0 rgba(255, 255, 255, .2) !important;
+  box-shadow: -9px 0 18px rgba(20, 21, 21, .1), inset 0 0 1px 0 rgba(255, 255, 255, .2) !important;
 }
 @media (not -moz-pref("gwt.atbc")) and (prefers-color-scheme: light) {
   outline: solid 1px rgba(255, 255, 255, .4) !important;
 }
-@media (min-width: 610px) and (max-width: 866px) {
+@media (min-width: 549px) and (max-width: 779px) {
   visibility: visible;
 }
 }
@@ -3544,17 +3549,17 @@ tab-group > .tabbrowser-tab,
 
 #nav-bar #sidebar-button {
   position: fixed !important;
-  left: 200px;
-  top: 4.5px;
+  left: 180px;
+  top: 4px;
   background: none !important;
   box-shadow: none !important;
-  width: 29px !important;
-  height: 27px !important;
-  padding: 5px !important;
-@media (min-width: 610px) and (max-width: 866px) {
-  left: 85px;
+  width: 26px !important;
+  height: 24px !important;
+  padding: 4px !important;
+@media (min-width: 549px) and (max-width: 779px) {
+  left: 76px;
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
-  left: 186px;
+  left: 167px;
 }
 }
 &:not([disabled], [open]):hover {
@@ -3566,13 +3571,13 @@ tab-group > .tabbrowser-tab,
 }
 
 #urlbar-container {
-@media (min-width: 610px) and (max-width: 866px) {
+@media (min-width: 549px) and (max-width: 779px) {
   max-width: 60% !important;
 }
 }
 
 #urlbar:not([open], [focused]) .urlbar-input-container[pageproxystate="invalid"] .searchmode-switcher {
-@media (min-width: 610px) and (max-width: 866px) {
+@media (min-width: 549px) and (max-width: 779px) {
   margin-inline-start: 0 !important;
 }
 }
@@ -3585,12 +3590,12 @@ tab-group > .tabbrowser-tab,
   visibility: collapse;
 }
 #sidebar-box {
-  margin-inline-start: 8px !important;
+  margin-inline-start: 7px !important;
 }
 .split-view-panel {
 :has([sidebar-shown]) & {
 &[column="0"] {
-  margin-left: 8px !important;
+  margin-left: 7px !important;
 }
 }
 :has(#sidebar-box:not([hidden])) & {
@@ -3602,7 +3607,7 @@ tab-group > .tabbrowser-tab,
 }
 #sidebar-button {
 > .toolbarbutton-badge-stack {
-  padding: 10px !important;
+  padding: 9px !important;
 }
 }
 
@@ -3613,19 +3618,19 @@ tab-group > .tabbrowser-tab,
 
 .tab-group-label {
   font-size: 0 !important;
-  margin-left: 10px !important;
+  margin-left: 9px !important;
   padding: 0 !important;
-  width: 32px !important;
-  min-height: 32px !important;
-  max-width: 32px !important;
+  width: 29px !important;
+  min-height: 29px !important;
+  max-width: 29px !important;
   background-position: center;
 }
 
 .tab-close-button {
   background-image: none !important;
   box-shadow: none !important;
-  top: 8px !important;
-  inset-inline-start: 17px !important;
+  top: 7px !important;
+  inset-inline-start: 15px !important;
   outline-color: transparent !important;
   background: none !important;
 &:hover {
@@ -3637,17 +3642,17 @@ tab-group > .tabbrowser-tab,
 }
 
 #tabs-newtab-button, #vertical-tabs-newtab-button {
-  border-radius: 50px !important;
+  border-radius: 45px !important;
 }
 
 tab-split-view-wrapper {
 .tab-background {
-  margin-inline-start: 9px !important;
-  width: 32px !important;
-  height: 32px !important;
+  margin-inline-start: 8px !important;
+  width: 29px !important;
+  height: 29px !important;
 }
 .tab-close-button {
-  margin-inline-start: 17px !important;
+  margin-inline-start: 15px !important;
 }
 }
 }
@@ -3655,9 +3660,9 @@ tab-split-view-wrapper {
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
 tab-group {
 .tab-group-label {
-  background-position: left 10px bottom 10px;
+  background-position: left 9px bottom 9px;
 tab-group[collapsed] > .tab-group-label-container & {
-  background-position: left 8px bottom 8px;
+  background-position: left 7px bottom 7px;
 }
 }
 }
@@ -3668,12 +3673,12 @@ tab-group[collapsed] > .tab-group-label-container & {
   --dp: none;
   --op: 0;
 .titlebar-buttonbox-container {
-  margin-inline: 7px !important;
-@media (min-width: 610px) and (max-width: 866px) {
-  margin-top: 19px !important;
+  margin-inline: 6px !important;
+@media (min-width: 549px) and (max-width: 779px) {
+  margin-top: 17px !important;
 }
 :has([sidebar-shown]) & {
-  margin-left: -7px !important;
+  margin-left: -6px !important;
 }
 }
 
@@ -3682,7 +3687,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 
 .split-view-panel {
-  margin: 8px !important;
+  margin: 7px !important;
 }
 
 #navigator-toolbox {
@@ -3692,12 +3697,12 @@ tab-group[collapsed] > .tab-group-label-container & {
   right: 0;
   transition: top .25s !important;
 &:not(:hover) {
-  top: -53px;
+  top: -48px;
   transition: top .25s !important;
   transition-delay: .5s !important;
 }
 :has(#urlbar[open]) & {
-  top: -95px;
+  top: -86px;
 }
 :has(#urlbar[focused], #urlbar :is(.urlbar-page-action[open], .identity-box-button[open], #notification-popup-box[open], #trust-icon-container[open]), toolbarbutton:is(#downloads-button, #PanelUI-menu-button, #nav-bar-overflow-button, #alltabs-button)[open], .searchmode-switcher[open], #placesContext:hover, #toggle_PersonalToolbar:hover, #toolbar-context-menu > menuitem:not(#toolbar-context-openANewTab, #toolbar-context-reloadSelectedTab, #toolbar-context-reloadSelectedTabs, #toolbar-context-bookmarkSelectedTab, #toolbar-context-bookmarkSelectedTabs, #toolbar-context-selectAllTabs, #toolbar-context-undoCloseTab):hover) & {
   top: 0;
@@ -3712,16 +3717,16 @@ tab-group[collapsed] > .tab-group-label-container & {
 &::before {
   content: "";
   position: absolute;
-  top: 52px;
+  top: 47px;
   left: 0;
-  height: 18px;
+  height: 16px;
   width: 100%;
 }
 :not(:has([sidebar-shown])) & {
   padding-left: 0 !important;
 }
 :root:not([inFullscreen]):has([sidebar-shown]) & {
-  padding-left: 76px !important;
+  padding-left: 68px !important;
 }
 }
 
@@ -3755,21 +3760,21 @@ tab-group > .tabbrowser-tab,
 
 tab-group {
 .tab-group-label {
-  font-size: 13px !important;
-  background-position: left 9px bottom 11px;
-  border-radius: 8px !important;
+  font-size: 12px !important;
+  background-position: left 8px bottom 10px;
+  border-radius: 7px !important;
 
 #tabbrowser-tabs:not([expanded]) & {
-  width: 220px !important;
-  padding-left: 33px !important;
+  width: 198px !important;
+  padding-left: 30px !important;
   max-width: unset !important;
   font-size-adjust: unset !important;
 }
 
 tab-group[collapsed] > .tab-group-label-container & {
-  background-position: left 9px bottom 7.5px;
+  background-position: left 8px bottom 7px;
 [hasactivetab] & {
-  background-position: left 9px bottom 7.5px, left 12.5px bottom 7.5px;
+  background-position: left 8px bottom 7px, left 11px bottom 7px;
 }
 }
 }
@@ -3777,8 +3782,8 @@ tab-group[collapsed] > .tab-group-label-container & {
 }
 
 #tabbrowser-tabs {
-  padding-top: 30px !important;
-  width: 240px !important;
+  padding-top: 27px !important;
+  width: 216px !important;
 &[overflow]::after {
   content: none !important;
 }
@@ -3786,15 +3791,15 @@ tab-group[collapsed] > .tab-group-label-container & {
 
 #tabs-newtab-button,
 #vertical-tabs-newtab-button {
-  border-radius: 8px !important;
-  width: 220px !important;
-  padding-inline-start: 106px !important;
-  padding-inline-end: 100px !important;
+  border-radius: 7px !important;
+  width: 198px !important;
+  padding-inline-start: 95px !important;
+  padding-inline-end: 90px !important;
 }
 
 #pinned-tabs-container[orient="vertical"] {
-  margin-left: 5px !important;
-  margin-right: 5px !important;
+  margin-left: 4px !important;
+  margin-right: 4px !important;
 
 .tab-background {
   width: 100% !important;
@@ -3804,7 +3809,7 @@ tab-group[collapsed] > .tab-group-label-container & {
 
 .tabbrowser-tab {
   margin-left: 4px !important;
-  margin-right: 6px !important;
+  margin-right: 5px !important;
 }
 
 .tab-label-container {
@@ -3827,16 +3832,16 @@ tab-group[collapsed] > .tab-group-label-container & {
 .tabbrowser-tab:not([pinned]) {
 tab-split-view-wrapper & {
 &:last-child {
-  margin-inline-start: -5px !important;
+  margin-inline-start: -4px !important;
 }
 }
 }
 
 .tab-background {
-  min-width: 220px !important;
-  border-radius: 8px !important;
+  min-width: 198px !important;
+  border-radius: 7px !important;
 tab-split-view-wrapper & {
-  min-width: 107px !important;
+  min-width: 96px !important;
 }
 }
 
@@ -3846,7 +3851,7 @@ tab-split-view-wrapper & {
 }
 
 .tab-label-container {
-  margin-left: 10px !important;
+  margin-left: 9px !important;
 }
 
 .tab-icon-overlay {
@@ -3919,17 +3924,17 @@ tab-split-view-wrapper {
 }
 
 #sidebar-main, #sidebar-container {
-  height: calc(100% - 16px) !important;
-  min-width: 240px !important;
+  height: calc(100% - 14px) !important;
+  min-width: 216px !important;
   display: flex !important;
   visibility: visible;
   position: fixed;
-  top: 13px;
-  left: -255px;
+  top: 12px;
+  left: -230px;
   z-index: 3;
   border-radius: var(--br0) !important;
   background-color: var(--bg4);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(4px);
   overflow: unset !important;
   transition: left, box-shadow .25s;
   transition-delay: .5s;
@@ -3943,20 +3948,20 @@ tab-split-view-wrapper {
   content: "";
   position: absolute;
   top: 0;
-  left: -20px;
-  width: 25px;
+  left: -18px;
+  width: 22px;
   height: 100%;
 }
 &::after {
   content: "";
   position: absolute;
   top: 0;
-  right: -25px;
-  width: 35px;
+  right: -22px;
+  width: 32px;
   height: 100%;
 }
 :has(#sidebar-main:hover, #sidebar-container:hover, #tabContextMenu:hover, .tab-group-editor-panel[panelopen], .tab-note-editor-panel[panelopen], #tabbrowser-tabs[movingtab], #toolbar-context-menu > menuitem:is(#toolbar-context-openANewTab, #toolbar-context-reloadSelectedTab, #toolbar-context-reloadSelectedTabs, #toolbar-context-bookmarkSelectedTab, #toolbar-context-bookmarkSelectedTabs, #toolbar-context-selectAllTabs, #toolbar-context-undoCloseTab):hover) & {
-  left: 8px;
+  left: 7px;
   transition: cubic-bezier(.27, 1.217, .17, 1.0117) .5s;
 }
 }
@@ -3975,34 +3980,44 @@ tab-split-view-wrapper {
 } 
 /* === SHRINK TABS WHEN MULTIPLE ARE OPEN === */
 .tabbrowser-tab[fadein]:not([pinned]) {
-  min-width: 32px !important;
+  min-width: 29px !important;
 }
 
-/* === SUPER SHRINK TABS FIX === */
-/* Force tabs to shrink down to icon size when many are open before scrolling */
-
-:root {
-  --tab-min-width: 32px !important;
-  --tab-min-width-snapped: 32px !important;
+/* === CHROME STYLE DYNAMIC TABS FIX === */
+/* Force tabs to shrink down dynamically to icon size */
+:root, #tabbrowser-tabs, #tabbrowser-arrowscrollbox {
+  --tab-min-width: 38px !important;
+  --tab-min-width-snapped: 38px !important;
 }
 
-.tabbrowser-tab[fadein]:not([pinned]) {
-  min-width: 32px !important;
+/* Base rule: Inactive tabs can shrink to 38px (horizontal tab bar only) */
+#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab[fadein]:not([pinned]) {
+  min-width: 38px !important;
+  max-width: 160px !important;
+  clip-width: 38px !important;
   flex-shrink: 1 !important;
-  clip-width: 32px !important;
 }
 
-.tabbrowser-tab[fadein]:not([pinned]) .tab-content {
+/* Active tab MUST stay large (160px) (horizontal tab bar only) */
+#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab[fadein]:not([pinned])[selected="true"] {
+  min-width: 160px !important;
+  max-width: 160px !important;
+  clip-width: 160px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Ensure tab content padding doesn't block shrinking */
+#tabbrowser-tabs .tabbrowser-tab[fadein]:not([pinned]) .tab-content {
   padding-inline: 4px !important;
 }
 
-.tabbrowser-tab[fadein]:not([pinned]) .tab-label-container {
+/* Allow label container to compress completely */
+#tabbrowser-tabs .tabbrowser-tab[fadein]:not([pinned]) .tab-label-container {
   min-width: 0 !important;
 }
 
-/* Hide close button when tabs get very small (so icon fits) */
-.tabbrowser-tab[fadein]:not([pinned])[style*="width: 3"] .tab-close-button,
-.tabbrowser-tab[fadein]:not([pinned]):not([selected]) .tab-close-button {
+/* Hide close button on inactive tabs to save space, but reveal on hover */
+#tabbrowser-tabs .tabbrowser-tab[fadein]:not([pinned]):not([selected="true"]):not(:hover) .tab-close-button {
   display: none !important;
 }
 
@@ -4055,8 +4070,8 @@ tab-split-view-wrapper {
 
 /* Move package right and vertically center */
 .titlebar-buttonbox-container {
-  left: 20px !important;
-  top: 21px !important;
+  left: 18px !important;
+  top: 19px !important;
 }
 
 /* Fix Activation Zone */
@@ -4111,8 +4126,8 @@ tab-split-view-wrapper {
 .toolbarbutton-1[class*='workspace'],
 .toolbarbutton-1[id*='workspace'] {
   background: var(--button-bgcolor) !important;
-  border-radius: 50px !important;
-  margin: 8px 4px !important;
+  border-radius: 45px !important;
+  margin: 7px 4px !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -4143,9 +4158,19 @@ tab-split-view-wrapper {
   margin: 0 auto !important;
 }
 
-/* === ACTIVE TAB ACCENT LINE === */
+/* === REMOVE ACCENT OUTLINE FROM URL BAR (keep it on tabs elsewhere) === */
+#urlbar-container,
+#urlbar-container:hover,
+#urlbar-container:focus-within,
+#urlbar,
+#urlbar[focused],
+#urlbar[open] {
+  outline: none !important;
+  box-shadow: none !important;
+}
 .tabbrowser-tab[selected="true"] .tab-background {
-  box-shadow: inset 0 -1px 0 0 var(--color-accent-primary, AccentColor) !important;
+  background-color: transparent !important;
+  box-shadow: inset 0 -2px 0 0 var(--color-accent-primary, AccentColor) !important;
 }
 
 
@@ -4160,19 +4185,19 @@ tab-split-view-wrapper {
   background: var(--bg5) !important;
   box-shadow: var(--bs3) !important;
   border-radius: 50% !important;
-  margin: 8px !important;
+  margin: 7px !important;
   padding: 0 !important;
-  width: 36px !important;
-  height: 36px !important;
+  width: 32px !important;
+  height: 32px !important;
 }
 
 :is(#nav-bar, #TabsToolbar) toolbarbutton.chromeclass-toolbar-additional:not(#back-button, #forward-button, #new-tab-button, #tabs-newtab-button, #alltabs-button, #PanelUI-menu-button) > .toolbarbutton-icon,
 :is(#nav-bar, #TabsToolbar) toolbarbutton.chromeclass-toolbar-additional:not(#back-button, #forward-button, #new-tab-button, #tabs-newtab-button, #alltabs-button, #PanelUI-menu-button) > .toolbarbutton-badge-stack,
 :is(#nav-bar, #TabsToolbar) toolbarpaletteitem > toolbarbutton:not(#back-button, #forward-button, #new-tab-button, #tabs-newtab-button, #alltabs-button, #PanelUI-menu-button) > .toolbarbutton-icon,
 :is(#nav-bar, #TabsToolbar) toolbarpaletteitem > toolbarbutton:not(#back-button, #forward-button, #new-tab-button, #tabs-newtab-button, #alltabs-button, #PanelUI-menu-button) > .toolbarbutton-badge-stack {
-  width: 36px !important;
-  height: 36px !important;
-  padding: 10px !important;
+  width: 32px !important;
+  height: 32px !important;
+  padding: 9px !important;
 }
 
 
@@ -4186,12 +4211,12 @@ tab-split-view-wrapper {
 #navigator-toolbox #unified-extensions-button {
   position: fixed !important;
   display: flex !important;
-  inset-inline-end: 62px !important;
+  inset-inline-end: 56px !important;
   z-index: 10 !important;
 }
 
 #navigator-toolbox #TabsToolbar {
-  padding-inline-end: 98px !important;
+  padding-inline-end: 88px !important;
 }
 
 
@@ -4199,18 +4224,18 @@ tab-split-view-wrapper {
 
 
 #navigator-toolbox #TabsToolbar {
-  padding-inline-end: 122px !important;
+  padding-inline-end: 110px !important;
 }
 
 
 
 /* === REMOVE GHOST CAPSULE AND ADD MORE SPACE === */
 #navigator-toolbox #PanelUI-menu-button::before {
-  display: none !important;
+  /* display: none !important; */
 }
 
 #navigator-toolbox #TabsToolbar {
-  padding-inline-end: 122px !important;
+  padding-inline-end: 110px !important;
 }
 
 
@@ -4228,7 +4253,7 @@ tab-split-view-wrapper {
 }
 
 #navigator-toolbox #PanelUI-menu-button {
-  inset-inline-end: 18px !important;
+  inset-inline-end: 16px !important;
 }
 
 
@@ -4241,7 +4266,7 @@ tab-split-view-wrapper {
 /* === TRAFFIC LIGHTS ALT MENU FIX === */
 /* Push the traffic lights down when the Menu Bar is temporarily or permanently visible */
 :root:has(#toolbar-menubar:not([inactive="true"])) .titlebar-buttonbox-container {
-  margin-top: 28px !important;
+  margin-top: 25px !important;
   transition: margin-top 0.1s ease !important;
 }
 
@@ -4252,7 +4277,7 @@ menupopup menu,
 menupopup menuitem,
 menupopup menucaption {
   /* Slightly smaller font size as requested */
-  font-size: 13px !important;
+  font-size: 12px !important;
 }
 
 
@@ -4265,7 +4290,7 @@ menupopup menucaption {
 menupopup menu,
 menupopup menuitem,
 menupopup menucaption {
-  font-size: 13px !important;
+  font-size: 12px !important;
 }
 
 
@@ -4274,7 +4299,7 @@ menupopup menucaption {
 menupopup menu,
 menupopup menuitem,
 menupopup menucaption {
-  font-size: 13px !important;
+  font-size: 12px !important;
 }
 
 
@@ -4283,7 +4308,7 @@ menupopup menucaption {
 menupopup menu,
 menupopup menuitem,
 menupopup menucaption {
-  font-size: 13px !important;
+  font-size: 12px !important;
 }
 
 
@@ -4293,7 +4318,7 @@ menupopup menucaption {
 menupopup menu,
 menupopup menuitem,
 menupopup menucaption {
-  font-size: 13px !important;
+  font-size: 12px !important;
 }
 
 
@@ -4303,7 +4328,7 @@ menupopup menucaption {
 /* Make bookmarks slightly smaller without hardcoding */
 #PersonalToolbar .bookmark-item {
   padding-block: 2px !important;
-  font-size: 13px !important;
+  font-size: 12px !important;
 }
 
 
@@ -4312,7 +4337,7 @@ menupopup menucaption {
 /* Make bookmarks slightly smaller without hardcoding */
 #PersonalToolbar .bookmark-item {
   padding-block: 2px !important;
-  font-size: 13px !important;
+  font-size: 12px !important;
 }
 
 
@@ -4339,7 +4364,7 @@ menupopup,
 /* Make bookmarks slightly smaller without hardcoding */
 #PersonalToolbar .bookmark-item {
   padding-block: 2px !important;
-  font-size: 13px !important;
+  font-size: 12px !important;
 }
 
 
@@ -4369,15 +4394,442 @@ menupopup,
    we keep it full-width. To prevent it from overlapping the vertical tabs sidebar, 
    we dynamically push the sidebar down whenever the bookmarks toolbar is visible! */
 #PersonalToolbar {
-  padding-left: 76px !important;
+  padding-left: 68px !important;
   margin-left: 0 !important;
   transition: padding-left .2s !important;
 }
 
-/* Push the sidebar and its splitter down by ~34px when Bookmarks Toolbar is shown */
+/* Push the sidebar and its splitter down by ~31px when Bookmarks Toolbar is shown */
 :root:has(#PersonalToolbar:not([collapsed="true"]):not([hidden])) #sidebar-box,
 :root:has(#PersonalToolbar:not([collapsed="true"]):not([hidden])) .sidebar-splitter {
-  margin-top: 29px !important; 
+  margin-top: 26px !important; 
   transition: margin-top 0.2s ease !important;
 }
 
+
+
+/* --- COMPACT TABS --- */
+.tabbrowser-tab {
+  max-width: 160px !important;
+}
+
+
+
+
+/* === FIX: collapsed vertical-tabs icon rail overlapping traffic lights === */
+/* When Sidebar → Expand on Hover is on, the narrow (unhovered) icon rail had
+   no top padding, so the tab-list icon and "+" button sat under the
+   red/orange/green window buttons. Push the rail down to clear them. */
+@media -moz-pref("sidebar.verticalTabs") {
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+#sidebar-main, #sidebar-container {
+  padding-top: 8px !important;
+}
+}
+}
+
+/* === FIX: collapsed vertical-tab pill not centered behind the icon === */
+/* In the narrow (unhovered) icon-only rail, the selected/hover tab-background
+   pill was inheriting sizing meant for the horizontal tab bar, so it rendered
+   as an oversized, clipped circle offset from the favicon. Force it to be a
+   small, exact, concentric circle that fits inside the row, and give the row
+   a bit of breathing room so it doesn't touch the "+" new-tab button. */
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) .tabbrowser-tab:not([pinned]) {
+  min-height: 32px !important;
+  height: 32px !important;
+  overflow: visible !important;
+  margin-block: 2px !important;
+}
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) .tabbrowser-tab:not([pinned]) .tab-stack {
+  overflow: visible !important;
+}
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) .tabbrowser-tab:not([pinned]) .tab-background {
+  position: absolute !important;
+  inset: 0 !important;
+  margin: auto !important;
+  width: 26px !important;
+  height: 26px !important;
+  min-width: 26px !important;
+  max-width: 26px !important;
+  min-height: 26px !important;
+  max-height: 26px !important;
+  border-radius: 50% !important;
+}
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) .tabbrowser-tab:not([pinned]) .tab-content {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+
+#vertical-tabs-newtab-button, #tabs-newtab-button {
+@media -moz-pref("sidebar.verticalTabs") {
+#tabbrowser-tabs:not([expanded]) ~ & {
+  margin-block-start: 4px !important;
+}
+}
+}
+
+/* --- ULTIMATE DYNAMIC TAB SHRINKING --- */
+:root {
+  --tab-min-width: 32px !important;
+  --tab-min-width-snapped: 32px !important;
+}
+
+/* Normal inactive tabs (horizontal tab bar only) */
+#tabbrowser-tabs[orient="horizontal"] tab.tabbrowser-tab[fadein]:not([pinned]) {
+  min-width: 32px !important;
+  max-width: 160px !important;
+  clip-width: 32px !important;
+}
+
+/* Active tab MUST stay large (horizontal tab bar only) */
+#tabbrowser-tabs[orient="horizontal"] tab.tabbrowser-tab[fadein]:not([pinned])[selected="true"],
+#tabbrowser-tabs[orient="horizontal"] tab.tabbrowser-tab[fadein]:not([pinned])[visuallyselected="true"] {
+  min-width: 160px !important;
+  max-width: 160px !important;
+  clip-width: 160px !important;
+  flex-shrink: 0 !important;
+}
+
+/* GHOST TAB FIX: Instantly collapse tabs that are closing (they lose fadein) */
+tab.tabbrowser-tab:not([fadein]) {
+  min-width: 0 !important;
+  max-width: 0 !important;
+  opacity: 0 !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Hide close button on inactive tabs, but reveal on hover */
+tab.tabbrowser-tab[fadein]:not([pinned]):not([selected="true"]):not([visuallyselected="true"]):not(:hover) .tab-close-button {
+  display: none !important;
+}
+
+
+
+/* --- FIX TAB TEXT OVERLAP (GRACEFUL SHRINKING) --- */
+/* Let the text shrink gracefully and hide ONLY when space runs out */
+tab.tabbrowser-tab .tab-icon-image {
+  flex-shrink: 0 !important; /* Ensure the favicon never gets squished */
+}
+tab.tabbrowser-tab .tab-label-container {
+  min-width: 0 !important;
+  flex-shrink: 1 !important;
+  overflow: hidden !important;
+}
+tab.tabbrowser-tab .tab-text, 
+tab.tabbrowser-tab .tab-label {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: clip !important;
+  white-space: nowrap !important;
+}
+
+/* ========================================================= */
+/* --- STANDARD UI TOGGLE (safari_firefox_old = true)    --- */
+/* ========================================================= */
+@media -moz-pref("safari_firefox_old"), (-moz-bool-pref: "safari_firefox_old") {
+  
+  /* ALLOW ADAPTIVE TAB BAR THEMES TO SHOW THROUGH — tabs row only,
+     not the URL bar row */
+  html#main-window #navigator-toolbox {
+    background-color: var(--bg4) !important;
+  }
+  html#main-window #TabsToolbar {
+    background-color: var(--lwt-accent-color, var(--bg4)) !important;
+  }
+  html#main-window #nav-bar {
+    background-color: var(--bg4) !important;
+  }
+  
+  /* ===== URL BAR CENTERING (applies in both 1-tab and 2-tab modes) ===== */
+  html#main-window #urlbar-container {
+    width: 40vw !important;
+    max-width: 40vw !important;
+    margin-inline: auto !important;
+    transition: width 0.2s ease-out, max-width 0.2s ease-out !important;
+  }
+  html#main-window #urlbar-container:hover {
+    width: 45vw !important;
+    max-width: 45vw !important;
+  }
+  html#main-window #urlbar-container:focus-within {
+    width: 55vw !important;
+    max-width: 55vw !important;
+  }
+  
+  /* ===== ALWAYS SHOW TABS BAR (2-row flex layout) ===== */
+  html#main-window #navigator-toolbox {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  html#main-window #nav-bar {
+    width: 100% !important;
+    max-width: none !important;
+    order: 1 !important;
+    padding-left: 76px !important;
+    padding-right: 120px !important; /* Space for fixed buttons on right */
+  }
+  html#main-window #TabsToolbar {
+    width: 100% !important;
+    max-width: none !important;
+    order: 2 !important;
+    padding-inline-end: 49px !important;
+  }
+  
+  /* PIN + AND DOWNLOAD BUTTONS TO TOP ROW ALWAYS -- moved to end of file for cascade priority, see bottom */
+  html#main-window #TabsToolbar {
+    padding-inline-end: 0 !important;
+  }
+  
+  /* Hide titlebar spacers */
+  html#main-window #TabsToolbar .titlebar-spacer {
+    display: none !important;
+  }
+  
+  /* STRETCHING PILL TABS */
+  html#main-window #tabbrowser-tabs .scrollbox-clip,
+  html#main-window #tabbrowser-tabs .scrollbox,
+  html#main-window #tabbrowser-arrowscrollbox::part(scrollbox) {
+    display: flex !important;
+    justify-content: center !important;
+    flex-grow: 1 !important;
+    width: 100% !important;
+  }
+
+  /* Equally divide tabs (50/50, 33/33, etc.) */
+  html#main-window #tabbrowser-tabs .tabbrowser-tab[fadein]:not([pinned]) {
+    flex: 1 1 0 !important;
+    max-width: none !important; 
+    min-width: 30px !important;
+    margin: 0 4px !important;
+    padding: 0 !important;
+    position: relative !important;
+  }
+  
+  /* Single tab: no max-width cap — let it fill the whole tabs bar */
+  html#main-window #tabbrowser-tabs .tabbrowser-tab[fadein]:not([pinned]):only-of-type {
+    max-width: none !important;
+  }
+  
+  /* Rounded pill tab backgrounds */
+  html#main-window #tabbrowser-tabs .tab-background {
+    border-radius: 16px !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background-color: var(--toolbar-bgcolor, rgba(0,0,0,0.1)) !important;
+  }
+  
+  /* Active Tab Highlight — thin bottom accent line, no full fill */
+  html#main-window #tabbrowser-tabs .tabbrowser-tab[selected="true"] .tab-background {
+    background-color: transparent !important;
+    box-shadow: inset 0 -2px 0 0 var(--color-accent-primary, AccentColor) !important;
+  }
+  
+  /* GHOST TAB FIX - hide tabs that haven't finished loading */
+  html#main-window #tabbrowser-tabs .tabbrowser-tab:not([fadein]) {
+    flex: none !important;
+    max-width: 0 !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  
+  html#main-window #tabbrowser-tabs .tabbrowser-tab[fadein] .tab-stack {
+    max-width: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  html#main-window #tabbrowser-tabs .tabbrowser-tab[fadein] .tab-content {
+    max-width: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 12px !important;
+  }
+
+  /* Bookmarks Toolbar */
+  html#main-window #PersonalToolbar {
+    order: 3 !important;
+    width: 100% !important;
+  }
+  :root[customizing] html#main-window #PersonalToolbar {
+    display: flex !important;
+  }
+
+  /* TABS HEIGHT */
+  html#main-window #tabbrowser-tabs {
+    --tab-min-height: 32px !important;
+  }
+  html#main-window #tabbrowser-tabs .tabbrowser-tab {
+    min-height: 32px !important;
+    height: 32px !important;
+  }
+  html#main-window #TabsToolbar {
+    --toolbar-min-height: 32px !important;
+  }
+  html#main-window #tabbrowser-tabs .tab-background {
+    min-height: 32px !important;
+    height: 32px !important;
+    margin-block: 0 !important;
+  }
+}
+
+/* ========================================================= */
+/* --- VERTICAL TABS CUSTOMIZATIONS (STRETCH PILLS + URL)--- */
+/* ========================================================= */
+@media -moz-pref("sidebar.verticalTabs") {
+  
+  /* 1. STRETCH PILLS TO FILL SIDEBAR */
+  #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab {
+    width: 100% !important;
+    max-width: none !important;
+  }
+  #tabbrowser-tabs[orient="vertical"] .tab-background {
+    width: auto !important;
+    max-width: none !important;
+    margin-right: 3px !important;
+  }
+
+  /* Protect window controls from overlapping nav-bar */
+  :root:not([sidebar-shown]) html#main-window #nav-bar {
+    padding-left: 90px !important;
+  }
+  :root[sidebar-shown] html#main-window #nav-bar {
+    padding-left: 0px !important;
+  }
+
+  /* PURE FLEXBOX CENTERING FOR URL BAR */
+  html#main-window #nav-bar toolbarspring {
+    display: none !important;
+  }
+  
+  html#main-window #urlbar-container,
+  html#main-window #urlbar-container:not(:hover):not(:focus-within) {
+    width: 35vw !important;
+    max-width: 35vw !important;
+    min-width: 300px !important;
+    margin-inline: auto !important;
+    transition: width 0.15s ease-out, max-width 0.15s ease-out !important;
+  }
+  html#main-window #urlbar-container:hover {
+    width: 42vw !important;
+    max-width: 42vw !important;
+  }
+  html#main-window #urlbar-container:focus-within {
+    width: 50vw !important;
+    max-width: 50vw !important;
+  }
+}
+
+/* FINAL VERTICAL TABS FIXES */
+@media -moz-pref("sidebar.verticalTabs") {
+  #TabsToolbar #tabs-newtab-button,
+  #TabsToolbar #new-tab-button {
+    display: none !important;
+  }
+  
+  html#main-window #nav-bar {
+    padding-left: 90px !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  html#main-window #urlbar-container {
+    width: 35vw !important;
+    max-width: 35vw !important;
+    min-width: 300px !important;
+    margin-inline: auto !important;
+  }
+  
+  #TabsToolbar {
+    visibility: collapse !important;
+  }
+  
+  .titlebar-buttonbox-container {
+    display: flex !important;
+    visibility: visible !important;
+  }
+}
+
+/* ========================================================= */
+/* --- FINAL OVERRIDE: PIN + AND DOWNLOAD BUTTONS TOP-RIGHT --- */
+/* Placed at end of file so it wins the cascade over every    */
+/* earlier #new-tab-button / #tabs-newtab-button rule.        */
+/* ========================================================= */
+@media -moz-pref("safari_firefox_old"), (-moz-bool-pref: "safari_firefox_old") {
+  html#main-window #new-tab-button,
+  html#main-window #tabs-newtab-button,
+  html#main-window #TabsToolbar #tabs-newtab-button,
+  html#main-window #downloads-button:not([hidden]) {
+    position: fixed !important;
+    top: 7px !important;
+    z-index: 100000 !important;
+    margin: 0 !important;
+    inset-inline-start: auto !important;
+    height: 32px !important;
+    width: 32px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    pointer-events: auto !important;
+    isolation: isolate !important;
+  }
+  /* The button's own ancestor chain must never be display:none / zero-size,
+     or it silently becomes unclickable even while still painted (this was
+     the "+ doesn't work until Ctrl+T" bug: #TabsToolbar collapsed to zero
+     height in 1-tab mode since #tabbrowser-tabs was hidden, taking pointer
+     interactivity away from the button along with it). */
+  html#main-window #TabsToolbar {
+    min-height: 1px !important;
+    pointer-events: auto !important;
+    visibility: visible !important;
+  }
+  html#main-window #new-tab-button,
+  html#main-window #tabs-newtab-button,
+  html#main-window #TabsToolbar #tabs-newtab-button {
+    inset-inline-end: 118px !important;
+  }
+  html#main-window #downloads-button:not([hidden]) {
+    inset-inline-end: 160px !important;
+  }
+  /* Undo any inner icon padding/margin so the arrow glyph sits dead-center, matching the + icon */
+  html#main-window #downloads-button:not([hidden]) .toolbarbutton-icon,
+  html#main-window #downloads-button:not([hidden]) > image {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Kill the reserved gap the buttons used to occupy inline in the tab row */
+  html#main-window #TabsToolbar {
+    padding-inline-end: 0 !important;
+  }
+  html#main-window #nav-bar {
+    padding-right: 0 !important;
+  }
+}
+
+/* ========================================================= */
+/* --- VERTICAL TABS: show close button on hover          --- */
+/* ========================================================= */
+@media -moz-pref("sidebar.verticalTabs") {
+  #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab:not([pinned]):hover .tab-close-button {
+    display: flex !important;
+    visibility: visible !important;
+  }
+  #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[fadein]:not([pinned]):not([selected="true"]):not(:hover) .tab-close-button {
+    display: none !important;
+  }
+}
