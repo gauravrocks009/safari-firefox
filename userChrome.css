@@ -1,4 +1,4 @@
-/* * * * * * * * * * * * * * * * * * * *
+  /* * * * * * * * * * * * * * * * * * * *
  * ░█▀▀▀░█░░░█░█▀▀▀░█▀▀█░█░░█░░░░▀▀█▀▀ *
  * ░█░▀█░█▄█▄█░█▀▀▀░█░ █░▄▀▀▄░▄▄▄░░█░░ *
  * ░▀▀▀▀░▀░░░▀░▀░░░░▀▀▀▀░▀░░▀░░░░░░▀░░ *
@@ -88,12 +88,7 @@
   --color-accent-primary-selected: light-dark(var(--bg0), color-mix(in srgb, var(--bg0) 90%, #000)) !important;
   --focus-outline-color: light-dark(color-mix(in srgb, var(--bg0) 55%, transparent), color-mix(in srgb, var(--bg0) 45%, #555)) !important;
 }
-@media not -moz-pref("gwt.atbc") {
-  --toolbar-bgcolor: light-dark(#fff, #202121) !important;
-  --toolbox-bgcolor: light-dark(#fff, #202121) !important;
-  --toolbar-background-color: light-dark(#fff, #202121) !important;
-  --toolbox-background-color: light-dark(#fff, #202121) !important;
-}
+
 @media (prefers-color-scheme: dark) {
   --bs3: 0 4px 18px rgba(20, 21, 21, .1), inset 1px 1.5px 1px -1px rgba(255, 255, 255, .18), inset -.4px -.4px 1px 0 rgba(255, 255, 255, .2);
   --bs4: 0 0 18px rgba(20, 21, 21, .1), inset 0 0 1px 0 rgba(255, 255, 255, .2);
@@ -123,7 +118,23 @@
   padding-left: 0 !important;
 }
 
-@media -moz-pref("sidebar.verticalTabs") {
+@media -moz-pref("sidebar.verticalTabs"), (-moz-bool-pref: "sidebar.verticalTabs") {
+
+  /* Reset the Plus and Downloads buttons from fixed positioning so they act natively */
+  html#main-window #tabs-newtab-button:not([hidden]),
+  html#main-window #downloads-button:not([hidden]) {
+    position: static !important;
+    transform: none !important;
+    margin-block: 0 !important;
+    height: auto !important;
+    width: auto !important;
+  }
+  
+  /* Un-hide the duplicate Plus button */
+  :root:not([customizing]) #new-tab-button {
+    display: flex !important;
+  }
+
 :has(#tabbrowser-tabs[expanded]) {
 #nav-bar {
   padding-left: 68px !important;
@@ -403,6 +414,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   display: none !important;
 }
 
+@media not -moz-pref("sidebar.verticalTabs") {
 #navigator-toolbox {
   display: grid;
   grid-template-columns: minmax(auto, 0) auto;
@@ -442,6 +454,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #navigator-toolbox > *:not(#TabsToolbar, #nav-bar) {
   grid-column: 1 / span 2 !important;
 }
+} /* end @media not verticalTabs */
 
 #alltabs-button { display: none !important;
   position: fixed;
@@ -454,16 +467,28 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
   top: 4px;
 }
 }
-/* Removed closing brace for media query */
 
-/* GLOBAL: Push + and Download buttons to the RIGHT side of TabsToolbar */
-#TabsToolbar-customization-target > #new-tab-button {
-  order: 1000 !important;
-  margin-inline-start: auto !important;
+/* GLOBAL: Fix the Extensions button perfectly between Plus and Three-Dot */
+#navigator-toolbox #unified-extensions-button {
+  position: fixed !important;
+  inset-inline-end: 56px !important;
+  z-index: 100 !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 32px !important;
+  width: 32px !important;
+  justify-content: center !important;
+  margin-block: 7px !important;
 }
-#TabsToolbar-customization-target > #downloads-button {
-  order: 1001 !important;
+
+/* GLOBAL: Hide Firefox View icon from ALL top bars */
+:root:not([customizing]) #firefox-view-button {
+  display: none !important;
 }
+
+/* Natively placed Plus buttons are no longer hidden */
+
+/* Removed hardcoded button positioning */
 
 
 /* button */
@@ -3971,12 +3996,8 @@ tab-split-view-wrapper {
 
 /* === USER REQUESTED OVERRIDES === */
 
-/* 3. Remove icons from the three-dot (App) menu ONLY */
-#appMenu-popup .toolbarbutton-icon,
-#appMenu-popup .subviewbutton-iconic > .toolbarbutton-icon,
-#appMenu-popup image {
-  display: none !important;
-}
+/* 3. Restore icons for the three-dot (App) menu ONLY (by removing display:none overrides) */
+/* (User originally wanted them gone, but now wants them back) */
 } 
 /* === SHRINK TABS WHEN MULTIPLE ARE OPEN === */
 .tabbrowser-tab[fadein]:not([pinned]) {
@@ -3993,16 +4014,16 @@ tab-split-view-wrapper {
 /* Base rule: Inactive tabs can shrink to 38px (horizontal tab bar only) */
 #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab[fadein]:not([pinned]) {
   min-width: 38px !important;
-  max-width: 160px !important;
+  max-width: 220px !important;
   clip-width: 38px !important;
   flex-shrink: 1 !important;
 }
 
 /* Active tab MUST stay large (160px) (horizontal tab bar only) */
 #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab[fadein]:not([pinned])[selected="true"] {
-  min-width: 160px !important;
-  max-width: 160px !important;
-  clip-width: 160px !important;
+  min-width: 220px !important;
+  max-width: 220px !important;
+  clip-width: 220px !important;
   flex-shrink: 0 !important;
 }
 
@@ -4169,9 +4190,12 @@ tab-split-view-wrapper {
   box-shadow: none !important;
 }
 .tabbrowser-tab[selected="true"] .tab-background {
-  background-color: transparent !important;
-  box-shadow: inset 0 -2px 0 0 var(--color-accent-primary, AccentColor) !important;
+  background-color: var(--lwt-selected-tab-background-color, var(--toolbar-bgcolor)) !important;
+  box-shadow: inset 0 0 0 2px rgba(128, 128, 128, 0.4) !important;
 }
+
+
+
 
 
 
@@ -4207,17 +4231,7 @@ tab-split-view-wrapper {
 
 
 
-/* === EXTENSIONS BUTTON RIGHT SIDE FIX === */
-#navigator-toolbox #unified-extensions-button {
-  position: fixed !important;
-  display: flex !important;
-  inset-inline-end: 56px !important;
-  z-index: 10 !important;
-}
 
-#navigator-toolbox #TabsToolbar {
-  padding-inline-end: 88px !important;
-}
 
 
 /* === REMOVE GHOST CAPSULE AND ADD MORE SPACE === */
@@ -4410,7 +4424,7 @@ menupopup,
 
 /* --- COMPACT TABS --- */
 .tabbrowser-tab {
-  max-width: 160px !important;
+  max-width: 220px !important;
 }
 
 
@@ -4480,16 +4494,16 @@ menupopup,
 /* Normal inactive tabs (horizontal tab bar only) */
 #tabbrowser-tabs[orient="horizontal"] tab.tabbrowser-tab[fadein]:not([pinned]) {
   min-width: 32px !important;
-  max-width: 160px !important;
+  max-width: 220px !important;
   clip-width: 32px !important;
 }
 
 /* Active tab MUST stay large (horizontal tab bar only) */
 #tabbrowser-tabs[orient="horizontal"] tab.tabbrowser-tab[fadein]:not([pinned])[selected="true"],
 #tabbrowser-tabs[orient="horizontal"] tab.tabbrowser-tab[fadein]:not([pinned])[visuallyselected="true"] {
-  min-width: 160px !important;
-  max-width: 160px !important;
-  clip-width: 160px !important;
+  min-width: 220px !important;
+  max-width: 220px !important;
+  clip-width: 220px !important;
   flex-shrink: 0 !important;
 }
 
@@ -4541,9 +4555,11 @@ tab.tabbrowser-tab .tab-label {
   }
   html#main-window #TabsToolbar {
     background-color: var(--lwt-accent-color, var(--bg4)) !important;
+    padding-inline-end: 0px !important;
   }
   html#main-window #nav-bar {
     background-color: var(--bg4) !important;
+    padding-inline-end: 0px !important;
   }
   
   /* ===== URL BAR CENTERING (applies in both 1-tab and 2-tab modes) ===== */
@@ -4625,11 +4641,12 @@ tab.tabbrowser-tab .tab-label {
     background-color: var(--toolbar-bgcolor, rgba(0,0,0,0.1)) !important;
   }
   
-  /* Active Tab Highlight — thin bottom accent line, no full fill */
+  /* Active Tab Highlight — full fill */
   html#main-window #tabbrowser-tabs .tabbrowser-tab[selected="true"] .tab-background {
-    background-color: transparent !important;
-    box-shadow: inset 0 -2px 0 0 var(--color-accent-primary, AccentColor) !important;
+    background-color: var(--lwt-selected-tab-background-color, var(--toolbar-bgcolor)) !important;
+    box-shadow: inset 0 0 0 2px rgba(128, 128, 128, 0.4) !important;
   }
+
   
   /* GHOST TAB FIX - hide tabs that haven't finished loading */
   html#main-window #tabbrowser-tabs .tabbrowser-tab:not([fadein]) {
@@ -4686,10 +4703,13 @@ tab.tabbrowser-tab .tab-label {
 }
 
 /* ========================================================= */
-/* --- VERTICAL TABS CUSTOMIZATIONS (STRETCH PILLS + URL)--- */
+/* --- VERTICAL TABS: normal (native) top-bar flow        --- */
+/* No hardcoded button positions here - the browser's own  */
+/* customizable-toolbar flow places +/downloads/extensions */
+/* /menu, so users can freely rearrange or add icons.      */
 /* ========================================================= */
 @media -moz-pref("sidebar.verticalTabs") {
-  
+
   /* 1. STRETCH PILLS TO FILL SIDEBAR */
   #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab {
     width: 100% !important;
@@ -4701,61 +4721,31 @@ tab.tabbrowser-tab .tab-label {
     margin-right: 3px !important;
   }
 
-  /* Protect window controls from overlapping nav-bar */
-  :root:not([sidebar-shown]) html#main-window #nav-bar {
-    padding-left: 90px !important;
+  /* Undo the horizontal-mode grid so nav-bar gets full, normal width.
+     Sidebar expand/collapse naturally pushes this row over since the
+     sidebar lives in its own column outside #navigator-toolbox. */
+  #navigator-toolbox {
+    display: block !important;
   }
-  :root[sidebar-shown] html#main-window #nav-bar {
-    padding-left: 0px !important;
-  }
-
-  /* PURE FLEXBOX CENTERING FOR URL BAR */
-  html#main-window #nav-bar toolbarspring {
-    display: none !important;
-  }
-  
-  html#main-window #urlbar-container,
-  html#main-window #urlbar-container:not(:hover):not(:focus-within) {
-    width: 35vw !important;
-    max-width: 35vw !important;
-    min-width: 300px !important;
-    margin-inline: auto !important;
-    transition: width 0.15s ease-out, max-width 0.15s ease-out !important;
-  }
-  html#main-window #urlbar-container:hover {
-    width: 42vw !important;
-    max-width: 42vw !important;
-  }
-  html#main-window #urlbar-container:focus-within {
-    width: 50vw !important;
-    max-width: 50vw !important;
-  }
-}
-
-/* FINAL VERTICAL TABS FIXES */
-@media -moz-pref("sidebar.verticalTabs") {
-  #TabsToolbar #tabs-newtab-button,
-  #TabsToolbar #new-tab-button {
-    display: none !important;
-  }
-  
   html#main-window #nav-bar {
-    padding-left: 90px !important;
+    width: 100% !important;
     display: flex !important;
-    justify-content: center !important;
+    align-items: center !important;
   }
-  
+
+  /* Center the url bar using flexible auto-margins (not a fixed px position) */
   html#main-window #urlbar-container {
-    width: 35vw !important;
-    max-width: 35vw !important;
-    min-width: 300px !important;
     margin-inline: auto !important;
+    max-width: 640px !important;
+    flex: 1 1 auto !important;
   }
-  
+
   #TabsToolbar {
     visibility: collapse !important;
   }
-  
+
+  /* Natively placed Plus buttons inside vertical tabs are no longer hidden */
+
   .titlebar-buttonbox-container {
     display: flex !important;
     visibility: visible !important;
@@ -4763,9 +4753,244 @@ tab.tabbrowser-tab .tab-label {
 }
 
 /* ========================================================= */
+/* --- BUGFIX: PREVENT + BUTTON FROM BECOMING UNCLICKABLE --- */
+/* ========================================================= */
+@media -moz-pref("safari_firefox_old"), (-moz-bool-pref: "safari_firefox_old") {
+  /* The button's own ancestor chain must never be display:none / zero-size,
+     or it silently becomes unclickable even while still painted (this was
+     the "+ doesn't work until Ctrl+T" bug: #TabsToolbar collapsed to zero
+     height in 1-tab mode since #tabbrowser-tabs was hidden, taking pointer
+     interactivity away from the button along with it). */
+  html#main-window #TabsToolbar {
+    min-height: 1px !important;
+    pointer-events: auto !important;
+    visibility: visible !important;
+  }
+}
+
+/* ========================================================= */
+/* --- VERTICAL TABS: show close button on hover          --- */
+/* ========================================================= */
+@media -moz-pref("sidebar.verticalTabs") {
+  #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab:not([pinned]):hover .tab-close-button {
+    display: flex !important;
+    visibility: visible !important;
+  }
+  #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[fadein]:not([pinned]):not([selected="true"]):not(:hover) .tab-close-button {
+    display: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BONJOURR EXTENSION TRANSPARENCY */
+:root#main-window:has(.tabbrowser-tab[selected="true"][image*="1ee2c6bf-9656-4582-8321-460a09b67524" i]) #navigator-toolbox,
+:root#main-window:has(.tabbrowser-tab[selected="true"][image*="1ee2c6bf" i]) #navigator-toolbox,
+:root#main-window:has(.tabbrowser-tab[selected="true"][image^="moz-extension://" i]) #navigator-toolbox,
+:root#main-window:has(.tabbrowser-tab[selected="true"][label*="New Tab" i]) #navigator-toolbox,
+:root#main-window:has(.tabbrowser-tab[selected="true"][label*="Bonjourr" i]) #navigator-toolbox,
+
+:root#main-window:has(.tabbrowser-tab[selected="true"][image*="1ee2c6bf-9656-4582-8321-460a09b67524" i]) #nav-bar,
+:root#main-window:has(.tabbrowser-tab[selected="true"][image*="1ee2c6bf" i]) #nav-bar,
+:root#main-window:has(.tabbrowser-tab[selected="true"][image^="moz-extension://" i]) #nav-bar,
+:root#main-window:has(.tabbrowser-tab[selected="true"][label*="New Tab" i]) #nav-bar,
+:root#main-window:has(.tabbrowser-tab[selected="true"][label*="Bonjourr" i]) #nav-bar,
+
+:root#main-window:has(.tabbrowser-tab[selected="true"][image*="1ee2c6bf-9656-4582-8321-460a09b67524" i]) #TabsToolbar,
+:root#main-window:has(.tabbrowser-tab[selected="true"][image*="1ee2c6bf" i]) #TabsToolbar,
+:root#main-window:has(.tabbrowser-tab[selected="true"][image^="moz-extension://" i]) #TabsToolbar,
+:root#main-window:has(.tabbrowser-tab[selected="true"][label*="New Tab" i]) #TabsToolbar,
+:root#main-window:has(.tabbrowser-tab[selected="true"][label*="Bonjourr" i]) #TabsToolbar,
+
+:root#main-window:has(.tabbrowser-tab[selected="true"][image*="1ee2c6bf-9656-4582-8321-460a09b67524" i]) #titlebar,
+:root#main-window:has(.tabbrowser-tab[selected="true"][image*="1ee2c6bf" i]) #titlebar,
+:root#main-window:has(.tabbrowser-tab[selected="true"][image^="moz-extension://" i]) #titlebar,
+:root#main-window:has(.tabbrowser-tab[selected="true"][label*="New Tab" i]) #titlebar,
+:root#main-window:has(.tabbrowser-tab[selected="true"][label*="Bonjourr" i]) #titlebar,
+
+:root#main-window:has(.tabbrowser-tab[selected="true"][image*="1ee2c6bf-9656-4582-8321-460a09b67524" i]),
+:root#main-window:has(.tabbrowser-tab[selected="true"][image*="1ee2c6bf" i]),
+:root#main-window:has(.tabbrowser-tab[selected="true"][image^="moz-extension://" i]),
+:root#main-window:has(.tabbrowser-tab[selected="true"][label*="New Tab" i]),
+:root#main-window:has(.tabbrowser-tab[selected="true"][label*="Bonjourr" i]) {
+    background-color: transparent !important;
+    background-image: none !important;
+    --toolbar-bgcolor: transparent !important;
+    --lwt-accent-color: transparent !important;
+}
+
+
+/* NEW TAB TRANSPARENCY (ESR COMPATIBLE FOR FLOORP) */
+:root#main-window[title^="Mozilla Firefox"] #navigator-toolbox,
+:root#main-window[title^="New Tab" i] #navigator-toolbox,
+:root#main-window[title^="Bonjourr" i] #navigator-toolbox,
+:root#main-window[title^="Floorp"] #navigator-toolbox {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+:root#main-window[title^="Mozilla Firefox"] #nav-bar,
+:root#main-window[title^="New Tab" i] #nav-bar,
+:root#main-window[title^="Bonjourr" i] #nav-bar,
+:root#main-window[title^="Floorp"] #nav-bar {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+:root#main-window[title^="Mozilla Firefox"] #TabsToolbar,
+:root#main-window[title^="New Tab" i] #TabsToolbar,
+:root#main-window[title^="Bonjourr" i] #TabsToolbar,
+:root#main-window[title^="Floorp"] #TabsToolbar {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+:root#main-window[title^="Mozilla Firefox"] #titlebar,
+:root#main-window[title^="New Tab" i] #titlebar,
+:root#main-window[title^="Bonjourr" i] #titlebar,
+:root#main-window[title^="Floorp"] #titlebar {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+:root#main-window[title^="Mozilla Firefox"],
+:root#main-window[title^="New Tab" i],
+:root#main-window[title^="Bonjourr" i],
+:root#main-window[title^="Floorp"] {
+    --toolbar-bgcolor: transparent !important;
+    --lwt-accent-color: transparent !important;
+}
+
+
+
+
+
+
+
+/* --- ACCENT ROUND TAB CLOSE BUTTON (Same for Light/Dark Mode) --- */
+.tabbrowser-tab .tab-close-button {
+  border-radius: 50% !important;
+  width: 20px !important;  /* Increased size */
+  height: 20px !important; /* Increased size */
+  padding: 4px !important;
+  transition: all 0.2s ease !important;
+  opacity: 0.8 !important;
+  background-color: transparent !important;
+  color: inherit !important;
+  margin-inline-end: 2px !important;
+  border: 1px solid transparent !important;
+}
+
+/* Fix for Vertical Tabs where close button is on the left and overflowing */
+#tabbrowser-tabs[orient="vertical"] .tab-close-button {
+  margin-inline-start: 8px !important; /* Push inwards from left edge */
+  margin-inline-end: 4px !important;
+}
+
+.tabbrowser-tab .tab-close-button:hover {
+  background-color: Highlight !important;
+  color: HighlightText !important;
+  border-color: Highlight !important;
+  opacity: 1 !important;
+  box-shadow: 0 0 0 1px Highlight !important;
+}
+.tabbrowser-tab .tab-close-button:active {
+  filter: brightness(0.8) !important;
+}
+.tabbrowser-tab .tab-close-button .close-icon {
+  width: 12px !important;  /* Increased size */
+  height: 12px !important; /* Increased size */
+}
+
+/* --- FIX CLOSE BUTTON HIDING LOGIC (Show up to 12 tabs) --- */
+/* Override Firefox's default activetab logic that triggers too early at 6 tabs */
+#tabbrowser-tabs:not([orient="vertical"])[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]):hover .tab-close-button {
+    display: flex !important; /* Force show even if Firefox says hide */
+}
+/* Apply our own CSS-based limit: Hide if there are 13 or more tabs */
+#tabbrowser-tabs:not([orient="vertical"]):has(.tabbrowser-tab:nth-child(13)) .tabbrowser-tab:not([selected="true"]):hover .tab-close-button {
+    display: none !important;
+}
+
+/* --- PWA TOOLBAR HIDING FIX --- */
+/* Floorp WebApps use the 'taskbartab' attribute but change the window ID to taskbartab-<id>.
+   This selector targets all WebApps accurately without breaking normal browser windows. */
+html[taskbartab] #nav-bar,
+html[taskbartab] #TabsToolbar,
+html[taskbartab] #PersonalToolbar {
+  display: none !important;
+  visibility: collapse !important;
+}
+
+/* --- VERTICAL TABS ALIGNMENT FIXES V16 --- */
+@media -moz-pref("sidebar.verticalTabs") {
+  
+  /* 1. Hide the ghost pill capsule on the Three-Dot menu */
+  #navigator-toolbox #PanelUI-menu-button::before,
+  #navigator-toolbox #PanelUI-menu-button::after {
+    display: none !important;
+  }
+
+  /* 2. CRITICAL FIX: Prevent the entire toolbar from sliding off the screen! 
+        The theme added 'margin-left: 162px' when the sidebar expands, but kept 'width: 100%'.
+        This forced the right edge off-screen. Setting width: auto perfectly fixes this! */
+  html#main-window #nav-bar {
+    position: relative !important;
+    width: auto !important; /* PREVENTS OVERFLOW WHEN MARGIN-LEFT IS APPLIED! */
+  }
+
+  /* 3. Force ONLY the Three-Dot menu to the absolute right side of the nav-bar, 
+        leaving the Extensions button free to be customized natively! */
+  html#main-window #PanelUI-menu-button {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    margin-block: auto !important;
+    transform: none !important;
+    display: flex !important;
+    align-items: center !important;
+    z-index: 10 !important;
+    inset-inline-end: 16px !important; /* Positioned on the right edge */
+  }
+
+  /* 5. RESTORE URL BAR SIZE: Give the URL bar back its massive original size! */
+  html#main-window #urlbar-container,
+  html#main-window #urlbar {
+    width: 40vw !important; /* Restored to massive size! */
+    max-width: 40vw !important; 
+    margin-inline: auto !important; /* Keeps it centered */
+  }
+  html#main-window #urlbar-container:hover,
+  html#main-window #urlbar:hover {
+    width: 45vw !important;
+    max-width: 45vw !important;
+  }
+  html#main-window #urlbar-container:focus-within,
+  html#main-window #urlbar:focus-within {
+    width: 55vw !important;
+    max-width: 55vw !important;
+  }
+}
+
+/* 6. FIX WINDOW CLOSE BUTTON HOVER COLOR IN ALL MODES */
+.titlebar-close:hover {
+  background-color: AccentColor !important; /* Active System Accent Color */
+  color: white !important;
+}
+
+/* ========================================================= */
 /* --- FINAL OVERRIDE: PIN + AND DOWNLOAD BUTTONS TOP-RIGHT --- */
-/* Placed at end of file so it wins the cascade over every    */
-/* earlier #new-tab-button / #tabs-newtab-button rule.        */
 /* ========================================================= */
 @media -moz-pref("safari_firefox_old"), (-moz-bool-pref: "safari_firefox_old") {
   html#main-window #new-tab-button,
@@ -4781,18 +5006,6 @@ tab.tabbrowser-tab .tab-label {
     width: 32px !important;
     padding: 0 !important;
     display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box !important;
-    pointer-events: auto !important;
-    isolation: isolate !important;
-  }
-  /* The button's own ancestor chain must never be display:none / zero-size,
-     or it silently becomes unclickable even while still painted (this was
-     the "+ doesn't work until Ctrl+T" bug: #TabsToolbar collapsed to zero
-     height in 1-tab mode since #tabbrowser-tabs was hidden, taking pointer
-     interactivity away from the button along with it). */
-  html#main-window #TabsToolbar {
     min-height: 1px !important;
     pointer-events: auto !important;
     visibility: visible !important;
@@ -4811,25 +5024,5 @@ tab.tabbrowser-tab .tab-label {
     margin: 0 !important;
     padding: 0 !important;
   }
-
-  /* Kill the reserved gap the buttons used to occupy inline in the tab row */
-  html#main-window #TabsToolbar {
-    padding-inline-end: 0 !important;
-  }
-  html#main-window #nav-bar {
-    padding-right: 0 !important;
-  }
 }
 
-/* ========================================================= */
-/* --- VERTICAL TABS: show close button on hover          --- */
-/* ========================================================= */
-@media -moz-pref("sidebar.verticalTabs") {
-  #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab:not([pinned]):hover .tab-close-button {
-    display: flex !important;
-    visibility: visible !important;
-  }
-  #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[fadein]:not([pinned]):not([selected="true"]):not(:hover) .tab-close-button {
-    display: none !important;
-  }
-}
